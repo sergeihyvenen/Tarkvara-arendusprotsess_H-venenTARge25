@@ -1,0 +1,188 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\opilane\\source\\repos\\Tarkvara-arendusprotsess_H-venenTARge25\\MyEpicBTCCalc\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\opilane\\source\\repos\\Tarkvara-arendusprotsess_H-venenTARge25\\MyEpicBTCCalc\\MyEpicBTCCalc\\MyEpicBTCCalc\\MyEpicBTCCalc.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:MyEpicBTCCalc\\MyEpicBTCCalc\\MyEpicBTCCalc.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\opilane\\source\\repos\\Tarkvara-arendusprotsess_H-venenTARge25\\MyEpicBTCCalc\\MyEpicBTCCalc\\MyEpicBTCCalc\\Form1.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:MyEpicBTCCalc\\MyEpicBTCCalc\\Form1.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\opilane\\source\\repos\\Tarkvara-arendusprotsess_H-venenTARge25\\MyEpicBTCCalc\\MyEpicBTCCalc\\MyEpicBTCCalc\\Form1.Designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:MyEpicBTCCalc\\MyEpicBTCCalc\\Form1.Designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\opilane\\source\\repos\\Tarkvara-arendusprotsess_H-venenTARge25\\MyEpicBTCCalc\\MyEpicBTCCalc\\MyEpicBTCCalc\\Form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:MyEpicBTCCalc\\MyEpicBTCCalc\\Form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\opilane\\source\\repos\\Tarkvara-arendusprotsess_H-venenTARge25\\MyEpicBTCCalc\\MyEpicBTCCalc\\MyEpicBTCCalc\\BitcoinRates.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:MyEpicBTCCalc\\MyEpicBTCCalc\\BitcoinRates.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 12,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MyEpicBTCCalc.csproj",
+              "DocumentMoniker": "C:\\Users\\opilane\\source\\repos\\Tarkvara-arendusprotsess_H-venenTARge25\\MyEpicBTCCalc\\MyEpicBTCCalc\\MyEpicBTCCalc\\MyEpicBTCCalc.csproj",
+              "RelativeDocumentMoniker": "MyEpicBTCCalc\\MyEpicBTCCalc\\MyEpicBTCCalc.csproj",
+              "ToolTip": "C:\\Users\\opilane\\source\\repos\\Tarkvara-arendusprotsess_H-venenTARge25\\MyEpicBTCCalc\\MyEpicBTCCalc\\MyEpicBTCCalc\\MyEpicBTCCalc.csproj",
+              "RelativeToolTip": "MyEpicBTCCalc\\MyEpicBTCCalc\\MyEpicBTCCalc.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-01-21T11:13:39.94Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Form1.resx",
+              "DocumentMoniker": "C:\\Users\\opilane\\source\\repos\\Tarkvara-arendusprotsess_H-venenTARge25\\MyEpicBTCCalc\\MyEpicBTCCalc\\MyEpicBTCCalc\\Form1.resx",
+              "RelativeDocumentMoniker": "MyEpicBTCCalc\\MyEpicBTCCalc\\Form1.resx",
+              "ToolTip": "C:\\Users\\opilane\\source\\repos\\Tarkvara-arendusprotsess_H-venenTARge25\\MyEpicBTCCalc\\MyEpicBTCCalc\\MyEpicBTCCalc\\Form1.resx",
+              "RelativeToolTip": "MyEpicBTCCalc\\MyEpicBTCCalc\\Form1.resx",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2026-01-21T11:13:38.416Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Form1.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\opilane\\source\\repos\\Tarkvara-arendusprotsess_H-venenTARge25\\MyEpicBTCCalc\\MyEpicBTCCalc\\MyEpicBTCCalc\\Form1.Designer.cs",
+              "RelativeDocumentMoniker": "MyEpicBTCCalc\\MyEpicBTCCalc\\Form1.Designer.cs",
+              "ToolTip": "C:\\Users\\opilane\\source\\repos\\Tarkvara-arendusprotsess_H-venenTARge25\\MyEpicBTCCalc\\MyEpicBTCCalc\\MyEpicBTCCalc\\Form1.Designer.cs",
+              "RelativeToolTip": "MyEpicBTCCalc\\MyEpicBTCCalc\\Form1.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-21T11:13:36.177Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\opilane\\source\\repos\\Tarkvara-arendusprotsess_H-venenTARge25\\MyEpicBTCCalc\\MyEpicBTCCalc\\MyEpicBTCCalc\\Form1.cs",
+              "RelativeDocumentMoniker": "MyEpicBTCCalc\\MyEpicBTCCalc\\Form1.cs",
+              "ToolTip": "C:\\Users\\opilane\\source\\repos\\Tarkvara-arendusprotsess_H-venenTARge25\\MyEpicBTCCalc\\MyEpicBTCCalc\\MyEpicBTCCalc\\Form1.cs",
+              "RelativeToolTip": "MyEpicBTCCalc\\MyEpicBTCCalc\\Form1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-21T11:13:31.513Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "BitcoinRates.cs",
+              "DocumentMoniker": "C:\\Users\\opilane\\source\\repos\\Tarkvara-arendusprotsess_H-venenTARge25\\MyEpicBTCCalc\\MyEpicBTCCalc\\MyEpicBTCCalc\\BitcoinRates.cs",
+              "RelativeDocumentMoniker": "MyEpicBTCCalc\\MyEpicBTCCalc\\BitcoinRates.cs",
+              "ToolTip": "C:\\Users\\opilane\\source\\repos\\Tarkvara-arendusprotsess_H-venenTARge25\\MyEpicBTCCalc\\MyEpicBTCCalc\\MyEpicBTCCalc\\BitcoinRates.cs",
+              "RelativeToolTip": "MyEpicBTCCalc\\MyEpicBTCCalc\\BitcoinRates.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-21T11:13:26.997Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:2:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:3:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:4:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 271,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
