@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <title>Who Does What</title>
+    <script>
+        let pics = ["/pildid/whodoeswhat.png", "/pildid/whodoeswhat2.png", "/pildid/whodoeswhat3.png"];
+        let currentIndex = 0;
+
+        function showNext() {
+            currentIndex = (currentIndex + 1) % pics.length;
+            document.getElementById("whoPic").src = pics[currentIndex];
+        }
+
+        function showPrev() {
+            currentIndex = (currentIndex - 1 + pics.length) % pics.length;
+            document.getElementById("whoPic").src = pics[currentIndex];
+        }
+
+        window.onload = function() {
+            document.getElementById("whoPic").src = pics[0];
+        }
+    </script>
+</head>
+<body>
+
+<h1>Who Does What</h1>
+<p>Kasuta nuppe piltide vahetamiseks:</p>
+
+<img id="whoPic" alt="Who Does What" style="max-width:100%; height:auto; display:block; margin-bottom:10px;">
+
+<button onclick="showPrev()">Previous</button>
+<button onclick="showNext()">Next</button>
+
+</body>
+</html>
