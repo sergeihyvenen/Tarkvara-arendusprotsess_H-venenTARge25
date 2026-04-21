@@ -1,16 +1,272 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="et">
 <head>
     <style>
         body {
             font-family: Tahoma, Arial, sans-serif;
         }
-      </style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            vertical-align: top;
+        }
+    </style>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Agiilne arendustsükkel</title>
 </head>
+
 <body>
-    
+
+<a href="./sdlc.html">Tagasi</a>
+
+<h1>Mis on Agiilne arendus?</h1>
+
+<p>
+Agiilne arendus on tarkvaraarenduse lähenemine, mis keskendub paindlikkusele ja kiirele kohanemisele <br>
+ muutuvate nõudmistega. Selle peamine eesmärk on arendada tarkvara väikeste sammudena, nii et tulemused <br>
+ oleksid kiiresti nähtavad ja vajadusel kergesti muudetavad. Selle meetodi puhul püütakse vältida liigset  <br>
+ bürokraatiat ja ebavajalikke tegevusi, mis ei loo otsest väärtust projektile. Töö jagatakse lühikesteks <br>
+ tsükliteks ning iga tsükli jooksul valmib mingi osa töötavast lahendusest. Agiilset lähenemist kasutatakse <br>
+  lisaks tarkvaraarendusele ka näiteks turunduses, projektijuhtimises ja disainis, kus on vaja kiiret <br>
+  tagasisidet ja kohanemist. <br>
+  Suurim kasu on see, et töötav tarkvara on olemas juba arenduse varases etapis ning muudatusi saab teha kiiresti <br>
+   ilma kogu projekti ümber tegemata. <br>
+
+</p>
+
+<br/>
+
+<h2>Agiilse arendustsükli etapid</h2>
+
+<ol>
+    <li><b>Scope ja prioriseerimine</b> – selles etapis kogutakse kõik ideed, nõuded ja võimalikud funktsioonid,<br>
+         mida süsteem võiks sisaldada. Meeskond analüüsib kliendi soove ning ärilisi eesmärke, et mõista,<br>
+          millised funktsioonid on kõige olulisemad. Seejärel hinnatakse iga idee väärtust, keerukust ja <br>
+           teostatavust. Vähem olulised või liiga ressursimahukad ülesanded jäetakse hilisemateks sprintideks. <br>
+            Selle etapi eesmärk on luua selge suund kogu projektile.</li> <br>
+    <li><b>Planeerimine</b> – kui prioriteedid on paigas, koostatakse detailne plaan järgmiseks arendustsükliks <br>
+        ehk sprintiks. Meeskond jagab töö väiksemateks ülesanneteks ning määrab vastutajad. Samuti hinnatakse <br>
+        ajakulu ja ressursse, et tagada realistlik töökoormus. Planeerimise käigus lepitakse kokku, millised <br>
+        ülesanded tuleb sprinti jooksul kindlasti valmis saada ning kuidas töö jaguneb meeskonna vahel.</li><br>
+    <li><b>Arendus (Sprint)</b> – selles faasis toimub tegelik arendustöö. Arendajad kirjutavad koodi, <br>
+        disainerid loovad kasutajaliidese ning vajadusel täiendatakse süsteemi funktsionaalsust. <br>
+        Töö toimub lühikeste iteratsioonidena, mille jooksul valmib töötav tarkvara osa. <br>
+        Sprinti ajal tehakse pidevat koostööd ja kontrollitakse, et arendus vastaks planeeritud <br>
+        eesmärkidele.</li><br>
+    <li><b>Testimine ja väljastamine</b> – pärast arendust kontrollitakse kogu loodud funktsionaalsust. <br>
+        Testimise eesmärk on leida vead ja tagada, et süsteem töötab korrektselt erinevates olukordades. <br>
+        Kasutatakse erinevaid testimismeetodeid, et tagada kvaliteet ja stabiilsus. Kui vead on parandatud <br>
+        ja süsteem vastab nõuetele, valmistatakse see ette väljalaskeks ning tehakse kasutajatele <br>
+        kättesaadavaks.</li><br>
+    <li><b>Tootmine ja tugi</b> – pärast väljalaset liigub süsteem tootmiskeskkonda, <br>   
+        kus seda hakkavad kasutama reaalsed kasutajad. Selles etapis jälgitakse süsteemi tööd, <br>
+        lahendatakse tekkinud probleeme ning pakutakse kasutajatele tuge. Samuti tehakse <br>
+        väiksemaid parandusi ja uuendusi, et tagada süsteemi stabiilne ja tõrgeteta toimimine.</li><br>
+    <li><b>Retrospektiiv</b> – iga sprindi lõpus analüüsib meeskond tehtud tööd. <br>
+         Arutatakse, mis läks hästi ja mis võiks olla paremini. <br>
+          Samuti tuvastatakse probleemid ja leitakse lahendused, kuidas järgmist sprinti efektiivsemaks muuta. <br>
+           Retrospektiivi eesmärk on pidev areng ja tööprotsessi parandamine.</li> <br>
+</ol>
+
+<br/>
+
+<h2>Agiilse arenduse protsessi joonis</h2>
+
+<pre>
+Ideede kogumine ja backlog
+        ↓
+Sprinti planeerimine
+        ↓
+Arendus (koodi kirjutamine)
+        ↓
+Testimine ja vigade parandamine
+        ↓
+Väljalase (release)
+        ↓
+Tagasiside ja retrospektiiv
+        ↓
+Uue tsükli alustamine (kordus)
+</pre>
+
+<br/>
+
+<h2>Alamvariantid</h2>
+
+<h2>BDD (Behaviour Driven Development)</h2>
+<p>
+BDD on tarkvaraarenduse meetod, mis keskendub süsteemi käitumise kirjeldamisele enne arenduse algust. <br>
+Selle peamine eesmärk on tagada, et kõik osapooled – arendajad, testijad ja kliendid – mõistaksid ühtemoodi,<br>
+ mida süsteem peab tegema ja kuidas see peab käituma reaalses kasutuses. <br>
+</p>
+<p>
+BDD-s kirjutatakse nõuded loomulikus keeles, sageli kasutades stsenaariume (Given-When-Then struktuur). <br>
+See muudab spetsifikatsioonid arusaadavaks ka mitte-tehnilistele inimestele. <br>
+Arendusprotsessis tehakse tihedat koostööd, et vältida valesti mõistetud nõudeid ja vähendada vigade arvu <br>
+hilisemates etappides. <br>
+</p>
+
+<h2>DDD (Design Driven Development)</h2>
+<p>
+Design Driven Development on lähenemine, kus kogu arendusprotsess algab ja liigub edasi disaini põhjal. <br>
+Enne funktsionaalsuse arendamist keskendutakse kasutajakogemusele, visuaalsele struktuurile ja kasutajaliidese loogikale. <br>
+</p>
+<p>
+Selle meetodi eesmärk on tagada, et toode oleks intuitiivne ja kasutajasõbralik juba varajases faasis. <br>
+Disaini testitakse prototüüpide abil ning kasutajate tagasisidet kasutatakse pidevaks parandamiseks. <br>
+See vähendab suuri muudatusi hiljem arenduse lõppfaasis. <br>
+</p>
+
+<h2>DDD (Domain Driven Development)</h2>
+<p>
+Domain Driven Development keskendub keerulise ärivaldkonna (domeeni) sügavale mõistmisele ja selle täpsele modelleerimisele tarkvaras. <br>
+ Arendus toimub tihedas koostöös valdkonna ekspertidega, et tagada süsteemi vastavus reaalsele äriloogikale. <br>
+</p>
+<p>
+DDD aitab jagada keerulise süsteemi väiksemateks loogilisteks osadeks (bounded context), <br>
+mis muudab selle hooldamise ja arendamise lihtsamaks. Selle meetodi eesmärk on, et tarkvara peegeldaks <br>
+täpselt päris maailma protsesse ja reegleid. <br>
+</p>
+
+<h2>SD (Secure by Design)</h2>
+<p>
+Secure by Design tähendab, et turvalisus on süsteemi osa juba algusest peale, mitte midagi, mis lisatakse hiljem. <br>
+ Turvameetmed planeeritakse arhitektuuri tasandil ning neid arvestatakse igas arendusetapis. <br>
+</p>
+<p>
+Selline lähenemine aitab ennetada turvaauke ja vähendada riske. Süsteem disainitakse nii, et see oleks vastupidav rünnakutele, <br>
+ sisaldaks minimaalseid õigusi ja kontrollitud ligipääsu ning järgiks turvalise arenduse põhimõtteid. <br>
+</p>
+
+<h2>TDD (Test Driven Development)</h2>
+<p>
+Test Driven Development on meetod, kus esmalt kirjutatakse testid ja alles seejärel arendatakse kood, mis need testid läbib. <br>
+Arendus toimub väikeste tsüklitena: test → kood → parandamine (refaktoreerimine). <br>
+</p>
+<p>
+See lähenemine aitab vähendada vigu, parandada koodi kvaliteeti ja muuta süsteem paremini testitavaks. <br>
+TDD sunnib arendajat mõtlema enne koodi kirjutamist, kuidas funktsioon peaks töötama. <br>
+</p>
+
+<h2>ATDD (Acceptance Test Driven Development)</h2>
+<p>
+Acceptance Test Driven Development keskendub kasutaja ja kliendi ootustele. <br>
+Enne arendust määratakse aktsepteerimiskriteeriumid, mis kirjeldavad, millal funktsioon loetakse valmis olevaks. <br>
+</p>
+<p>
+Testid kirjutatakse juba alguses ning need juhivad arendust. See tagab, et lõpptulemus vastab täpselt ärilistele ja kasutajate <br> 
+vajadustele ning vähendab arusaamatusi meeskonna sees. <br>
+</p>
+
+<h2>CTDD (Continuous Test Driven Development)</h2>
+<p>
+Continuous Test Driven Development on TDD edasiarendus, kus testid käivitatakse automaatselt pidevalt kogu arenduse jooksul. <br>
+Arendaja ei pea teste käsitsi käivitama, sest süsteem kontrollib koodi reaalajas. <br>
+</p>
+<p>
+See võimaldab kiiret tagasisidet ja vigade varajast avastamist. <br>
+CTDD parandab arenduse kiirust ja vähendab riski, et vead jõuavad lõppversiooni. <br>
+</p>
+
+<h2>Specification by Example</h2>
+<p>
+Specification by Example on meetod, kus nõuded kirjeldatakse reaalse elu näidete kaudu. <br>
+Selle asemel, et kasutada abstraktseid kirjeldusi, kasutatakse konkreetseid olukordi ja sisend-väljund näiteid. <br>
+</p>
+<p>
+See aitab arendajatel ja testijatel paremini mõista, kuidas süsteem peab erinevates olukordades käituma ning vähendab <br>
+arusaamatusi nõuetes. <br>
+</p>
+
+<h2>DDD (Data Driven Development)</h2>
+<p>
+Data Driven Development põhineb reaalsete andmete analüüsil. Otsused tehakse kasutajate käitumise, <br>
+statistika ja kogutud andmete põhjal, mitte oletuste järgi. <br>
+</p>
+<p>
+See võimaldab luua täpsemaid ja efektiivsemaid lahendusi, mis vastavad paremini kasutajate tegelikele vajadustele. <br>
+Andmeid kasutatakse pidevalt toote arendamiseks ja parandamiseks. <br>
+</p>
+
+<h2>DOD (Data Oriented Design)</h2>
+<p>
+Data Oriented Design keskendub sellele, kuidas andmed on süsteemis organiseeritud ja kuidas neid kõige efektiivsemalt töödelda. <br>
+Erinevalt klassikalisest lähenemisest pannakse rõhk andmestruktuuride optimeerimisele. <br>
+</p>
+<p>
+Eesmärk on parandada jõudlust, vähendada mälukasutust ja muuta andmetöötlus kiiremaks. <br>
+See on eriti oluline suurtes ja keerukates süsteemides, kus töökiirus on kriitiline. <br>
+</p>
+
+<h2>Mis on arendusmudeli tähtsaim omadus ja miks?</h2>
+
+<p>
+Agiilse arendusmudeli kõige tähtsam omadus on kohanemisvõime. See tähendab, et arendust saab muuta ja täiendada ka projekti keskel.
+</p>
+
+<p>
+See on oluline, sest:
+</p>
+
+<ul>
+    <li>klientide nõuded võivad muutuda</li>
+    <li>turg ja tehnoloogia arenevad kiiresti</li>
+    <li>vigu saab parandada varakult</li>
+    <li>lõpptulemus vastab paremini tegelikele vajadustele</li>
+</ul>
+
+<br/>
+
+<h2>Agile head ja vead</h2>
+
+<table>
+    <tr>
+        <th>Head</th>
+        <th>Vead</th>
+    </tr>
+    <tr>
+        <td>
+            <ul>
+                <li>Kiire tagasiside</li>
+                <li>Paindlik muutustele</li>
+                <li>Pidev tarne</li>
+                <li>Hea koostöö</li>
+            </ul>
+        </td>
+        <td>
+            <ul>
+                <li>Raske täpselt planeerida</li>
+                <li>Sõltub kliendi kaasatusest</li>
+                <li>Vähem dokumentatsiooni</li>
+                <li>Vajab kogenud meeskonda</li>
+            </ul>
+        </td>
+    </tr>
+</table>
+
+<br/>
+
+<h2>Allikad</h2>
+
+<ul>
+<li><a href="https://lucid.co/blog/agile-software-development-life-cycle">Lucidchart</a></li>
+<li><a href="https://agilemanifesto.org/iso/et/principles.html">Agilemanifesto</a></li>
+<li><a href="https://www.geeksforgeeks.org/software-engineering/behavioral-driven-development-bdd-in-software-engineering/">geeksforgeeks</a></li>
+<li><a href="https://www.geeksforgeeks.org/system-design/domain-driven-design-ddd/">geeksforgeeks</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Continuous_test-driven_development">wikipedia</a></li>
+<li><a href="https://www.uxpin.com/studio/blog/design-driven-development/">uxpin</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Secure_by_design">wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Test-driven_development">wikipedia</a></li>
+<li><a href="https://www.geeksforgeeks.org/software-engineering/acceptance-test-driven-development-atdd-in-software-engineering/">geeksforgeeks</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Specification_by_example">wikipedia</a></li>
+<li><a href="https://www.uxpin.com/studio/blog/data-driven-design/">uxpin</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Data-oriented_design">wikipedia</a></li>
+</ul>
+
 </body>
 </html>

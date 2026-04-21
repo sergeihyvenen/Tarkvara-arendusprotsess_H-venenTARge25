@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <style>
+        body {
+            font-family: Tahoma, Arial, sans-serif;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            vertical-align: top;
+        }
+    </style>
+
+    <meta charset="UTF-8">
+    <title>V-Model SDLC</title>
+</head>
+
+<body>
+
+<a href="./sdlc.html">Tagasi</a>
+
+<h1>Mis on V-Model?</h1>
+
+<p>
+V-Model (Verification and Validation Model) on tarkvaraarenduse elutsükli (SDLC) mudel, mis põhineb ideel, et iga arendusfaasi
+kõrval on olemas vastav testimisfaas. Mudel on kujutatud V-tähe kujuliselt, kus vasak pool tähistab arendust ja parem pool testimist.
+</p>
+
+<p>
+V-Model on lineaarne ja struktureeritud mudel, mis tähendab, et iga etapp tuleb lõpetada enne järgmise algust. Selle peamine eesmärk
+on tagada, et vigu leitakse varakult ning iga arendusetapp on otseselt seotud testimisega.
+</p>
+
+<p>
+Suurim kasu on see, et kvaliteet paraneb juba arenduse käigus, sest testimine ei toimu ainult lõpus, vaid igal tasandil paralleelselt.
+</p>
+
+<br/>
+
+<h2>V-Model etapid</h2>
+
+<ol>
+    <li>
+        <b>Nõuete analüüs (Requirement Analysis)</b> – selles etapis kogutakse kliendi vajadused ja määratakse süsteemi eesmärgid.
+        Kõik nõuded dokumenteeritakse ning analüüsitakse, et vältida arusaamatusi hiljem. See on kogu projekti alus.
+    </li><br>
+
+    <li>
+        <b>Süsteemi disain (System Design)</b> – siin planeeritakse kogu süsteemi arhitektuur. Määratakse, kuidas erinevad osad
+        omavahel suhtlevad ning milline on süsteemi üldine struktuur.
+    </li><br>
+
+    <li>
+        <b>Arhitektuurne disain (High Level Design)</b> – süsteem jaotatakse suuremateks mooduliteks ning määratakse nende
+        funktsioonid. See aitab mõista, kuidas süsteem tervikuna töötab.
+    </li><br>
+
+    <li>
+        <b>Detailne disain (Low Level Design)</b> – iga moodul disainitakse täpsemalt. Siin määratakse andmestruktuurid,
+        algoritmid ja täpsed funktsioonid.
+    </li><br>
+
+    <li>
+        <b>Programmeerimine (Coding)</b> – arendajad kirjutavad koodi vastavalt disainile. See on V-mudeli alumine punkt,
+        kust algab tõus testimise suunas.
+    </li><br>
+
+    <li>
+        <b>Üksustestimine (Unit Testing)</b> – testitakse iga koodiosa eraldi, et veenduda nende korrektses töös.
+    </li><br>
+
+    <li>
+        <b>Integratsioonitestimine (Integration Testing)</b> – kontrollitakse, kuidas erinevad moodulid koos töötavad.
+    </li><br>
+
+    <li>
+        <b>Süsteemitestimine (System Testing)</b> – testitakse kogu süsteemi tervikuna, et veenduda, et see vastab nõuetele.
+    </li><br>
+
+    <li>
+        <b>Kasutaja aktsepteerimistest (User Acceptance Testing)</b> – lõppkasutajad kontrollivad, kas süsteem vastab nende ootustele.
+    </li>
+</ol>
+
+<br/>
+
+<h2>V-Model joonis</h2>
+
+ <img src="../pildid/v-shape.webp" alt="">
+
+<br/>
+
+<h2>V-Model kõige tähtsam omadus</h2>
+
+<p>
+V-Modeli kõige tähtsam omadus on <b>varajane vigade avastamine läbi paralleelse testimise</b>.
+</p>
+
+<p>
+See on oluline, sest:
+</p>
+
+<ul>
+    <li>iga arendusetapp on seotud testimisega</li>
+    <li>vead leitakse varakult, mitte lõpus</li>
+    <li>arendus on struktureeritud ja kontrollitud</li>
+    <li>parandused on odavamad ja lihtsamad</li>
+</ul>
+
+<br/>
+
+<h2>V-Model head ja vead</h2>
+
+<table>
+    <tr>
+        <th>Head</th>
+        <th>Vead</th>
+    </tr>
+    <tr>
+        <td>
+            <ul>
+                <li>Vigade varajane tuvastamine</li>
+                <li>Selge struktuur</li>
+                <li>Lihtne hallata</li>
+                <li>Hea dokumentatsioon</li>
+            </ul>
+        </td>
+        <td>
+            <ul>
+                <li>Vähe paindlikkust</li>
+                <li>Raske muudatusi teha</li>
+                <li>Ei sobi keerulistele projektidele</li>
+                <li>Pikk planeerimisfaas</li>
+            </ul>
+        </td>
+    </tr>
+</table>
+
+<br/>
+
+<h2>Allikad</h2>
+
+<ul>
+<li><a href="https://www.geeksforgeeks.org/software-engineering/software-engineering-sdlc-v-model/">GeeksforGeeks - V-Shape</a></li>
+</ul>
+
+</body>
+</html>
