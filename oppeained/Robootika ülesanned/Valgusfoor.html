@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <style>
+.code-window {
+  background: #1e1e1e;
+  color: #d4d4d4;
+  padding: 12px;
+  border-radius: 8px;
+  font-family: monospace;
+
+  width: 700px;
+  max-height: 600px;
+  overflow: auto;
+
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+        body {
+            font-family: Tahoma, Arial, sans-serif;
+        }
+      </style>
+    <meta charset="UTF-8">
+    <title>Valgusfoor</title>
+</head>
+<body>
+<a href="/Robootika.html">Tagasi</a>
+<h1>Valgusfoor ülesanne</h1>
+
+<h2>Kood</h2>
+
+<div class="code-window">
+  <pre><code>
+//C++ code
+
+//VALGUSFOOR
+
+//Autod
+const int autoRoheline = 11;
+#define autoKollane 12
+const int autoPunane = 13;
+
+//Jalakäija
+const int jalaRoheline = 9;
+const int jalaPunane = 10;
+
+//Array for pins
+const int pinsArray[] = { autoRoheline, autoKollane, autoPunane, jalaRoheline, jalaPunane };
+const int pinsArray_length = sizeof(pinsArray) / sizeof(pinsArray[0]);
+
+
+//SETUP
+void setup()
+{
+  for (int i = 0; i > pinsArray_length; i++)
+  {
+    pinMode(pinsArray[i], OUTPUT);
+  }
+}
+
+//LOOP
+void loop() 
+{
+  paevReziim();
+  delay(700);
+  ooReziim();
+}
+
+//PÄEVAREŽIIM
+void paevReziim()
+{
+  //ESIMENE STATE
+  digitalWrite(autoRoheline, LOW);
+  digitalWrite(autoKollane, LOW);
+  digitalWrite(autoPunane, LOW);
+  digitalWrite(jalaRoheline, LOW);
+  digitalWrite(jalaPunane, LOW);
+  
+  //autoPunane ja jalaPunane -> ON
+  digitalWrite(autoPunane, HIGH);
+  digitalWrite(jalaPunane, HIGH);
+  
+  //Ootame 2 sek
+  delay(2000);
+  
+  //jalaPunane -> jalaRoheline
+  digitalWrite(jalaPunane, LOW);
+  digitalWrite(jalaRoheline, HIGH);
+  
+  //Ootame 2 sek
+  delay(2000);
+  
+  //jalaRoheline -> jalaPunane
+  cycleBlink(jalaRoheline, jalaPunane);
+  
+  //Ootame 2 sek
+  delay(2000);
+  
+  //autoPunane -> autoKollane
+  digitalWrite(autoPunane, LOW);
+  digitalWrite(autoKollane, HIGH);
+  
+  //Ootame 2 sek
+  delay(2000);
+  
+  //autokollane -> autoRoheline
+  digitalWrite(autoKollane, LOW);
+  digitalWrite(autoRoheline, HIGH);
+  
+  //Ootame 2 sek
+  delay(2000);
+  
+  //autoroheline -> autoKollane
+  cycleBlink(autoRoheline, autoKollane);
+  
+  //Ootame 2 sek
+  delay(2000);
+  
+  //autoKollane -> autoPunane
+  digitalWrite(autoKollane, LOW);
+  digitalWrite(autoPunane, HIGH);
+  delay(2000);
+}
+
+//ÖÖREŽIIM
+void ooReziim()
+{
+  //Paneme kõiki OFF
+  digitalWrite(autoRoheline, LOW);
+  digitalWrite(autoKollane, LOW);
+  digitalWrite(autoPunane, LOW);
+  digitalWrite(jalaRoheline, LOW);
+  digitalWrite(jalaPunane, LOW);
+
+  //Teeme autoKollane blink nagu reaalse ÖÖ valgusfoori režiimis
+  for (int i = 0; i < 10; i++)
+  {
+    blink(autoKollane);
+  }
+}
+
+void cycleBlink(int colorToBlink, int colorToSwitchTo)
+{
+  //Esiteks teeme blink
+  blink(colorToBlink);
+  //Nüüd paneme esimene värv millega blink oli OFF ja paneme järgmine värv ON
+  digitalWrite(colorToBlink, LOW);
+  digitalWrite(colorToSwitchTo, HIGH);
+  
+  //Teeme väike delay sellest, et funktsioon üldse töötab
+  delay(2000);
+}
+
+void blink(int color)
+{
+  for (int i = 0; i < 3; i++)
+  {
+    digitalWrite(color, LOW);
+  	delay(500);
+  	digitalWrite(color, HIGH);
+    delay(500);
+  }
+}
+
+  </code></pre>
+</div>
+
+<h2>Skeem</h2>
+
+<img src="/pildid/ValgusfoorSkeem.png" alt="">
+
+</body>
+</html>
