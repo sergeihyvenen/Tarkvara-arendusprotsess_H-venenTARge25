@@ -30,34 +30,31 @@
 
 <div class="code-window">
   <pre><code>
-//C++ code
+// VALGUSFOOR
 
-//VALGUSFOOR
-
-//Autod
+// Autod
 const int autoRoheline = 11;
-#define autoKollane 12
+const int autoKollane = 12;
 const int autoPunane = 13;
 
-//Jalakäija
+// Jalakäija
 const int jalaRoheline = 9;
 const int jalaPunane = 10;
 
-//Array for pins
+// Array for pins
 const int pinsArray[] = { autoRoheline, autoKollane, autoPunane, jalaRoheline, jalaPunane };
 const int pinsArray_length = sizeof(pinsArray) / sizeof(pinsArray[0]);
 
-
-//SETUP
+// SETUP
 void setup()
 {
-  for (int i = 0; i > pinsArray_length; i++)
+  for (int i = 0; i < pinsArray_length; i++) 
   {
     pinMode(pinsArray[i], OUTPUT);
   }
 }
 
-//LOOP
+// LOOP
 void loop() 
 {
   paevReziim();
@@ -65,98 +62,84 @@ void loop()
   ooReziim();
 }
 
-//PÄEVAREŽIIM
+// PÄEVAREŽIIM
 void paevReziim()
 {
-  //ESIMENE STATE
+  // Kõik OFF
   digitalWrite(autoRoheline, LOW);
   digitalWrite(autoKollane, LOW);
   digitalWrite(autoPunane, LOW);
   digitalWrite(jalaRoheline, LOW);
   digitalWrite(jalaPunane, LOW);
   
-  //autoPunane ja jalaPunane -> ON
+  // autoPunane ja jalaPunane -> ON
   digitalWrite(autoPunane, HIGH);
   digitalWrite(jalaPunane, HIGH);
-  
-  //Ootame 2 sek
   delay(2000);
   
-  //jalaPunane -> jalaRoheline
+  // jalaPunane -> jalaRoheline
   digitalWrite(jalaPunane, LOW);
   digitalWrite(jalaRoheline, HIGH);
-  
-  //Ootame 2 sek
   delay(2000);
   
-  //jalaRoheline -> jalaPunane
+  // blink + switch
   cycleBlink(jalaRoheline, jalaPunane);
-  
-  //Ootame 2 sek
   delay(2000);
   
-  //autoPunane -> autoKollane
+  // autoPunane -> autoKollane
   digitalWrite(autoPunane, LOW);
   digitalWrite(autoKollane, HIGH);
-  
-  //Ootame 2 sek
   delay(2000);
   
-  //autokollane -> autoRoheline
+  // autoKollane -> autoRoheline
   digitalWrite(autoKollane, LOW);
   digitalWrite(autoRoheline, HIGH);
-  
-  //Ootame 2 sek
   delay(2000);
   
-  //autoroheline -> autoKollane
+  // blink + switch
   cycleBlink(autoRoheline, autoKollane);
-  
-  //Ootame 2 sek
   delay(2000);
   
-  //autoKollane -> autoPunane
+  // autoKollane -> autoPunane
   digitalWrite(autoKollane, LOW);
   digitalWrite(autoPunane, HIGH);
   delay(2000);
 }
 
-//ÖÖREŽIIM
+// ÖÖREŽIIM
 void ooReziim()
 {
-  //Paneme kõiki OFF
+  // Kõik OFF
   digitalWrite(autoRoheline, LOW);
   digitalWrite(autoKollane, LOW);
   digitalWrite(autoPunane, LOW);
   digitalWrite(jalaRoheline, LOW);
   digitalWrite(jalaPunane, LOW);
 
-  //Teeme autoKollane blink nagu reaalse ÖÖ valgusfoori režiimis
+  // autoKollane blink
   for (int i = 0; i < 10; i++)
   {
     blink(autoKollane);
   }
 }
 
+// Blink + switch
 void cycleBlink(int colorToBlink, int colorToSwitchTo)
 {
-  //Esiteks teeme blink
   blink(colorToBlink);
-  //Nüüd paneme esimene värv millega blink oli OFF ja paneme järgmine värv ON
   digitalWrite(colorToBlink, LOW);
   digitalWrite(colorToSwitchTo, HIGH);
-  
-  //Teeme väike delay sellest, et funktsioon üldse töötab
   delay(2000);
 }
 
+// Blink function
 void blink(int color)
 {
   for (int i = 0; i < 3; i++)
   {
     digitalWrite(color, LOW);
-  	delay(500);
-  	digitalWrite(color, HIGH);
+    delay(500);
+    digitalWrite(color, HIGH);
     delay(500);
   }
 }
@@ -167,6 +150,9 @@ void blink(int color)
 <h2>Skeem</h2>
 
 <img src="/pildid/ValgusfoorSkeem.png" alt="">
+
+<h2>Video</h2>
+<p>https://youtu.be/bTz-iXPwhl0</p>
 
 </body>
 </html>
