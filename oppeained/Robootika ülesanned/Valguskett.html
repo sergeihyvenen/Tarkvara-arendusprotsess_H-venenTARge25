@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <style>
+.code-window {
+  background: #1e1e1e;
+  color: #d4d4d4;
+  padding: 12px;
+  border-radius: 8px;
+  font-family: monospace;
+
+  width: 700px;
+  max-height: 600px;
+  overflow: auto;
+
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+        body {
+            font-family: Tahoma, Arial, sans-serif;
+        }
+      </style>
+    <meta charset="UTF-8">
+    <title>Valguskett</title>
+</head>
+<body>
+<a href="/Robootika.html">Tagasi</a>
+<h1>Valguskett ülesanne</h1>
+
+<h2>Kood</h2>
+
+<div class="code-window">
+  <pre><code>
+// VALGUSKETT
+int led[] = {13, 12, 11, 10, 9, 8};
+int arrayLength = sizeof(led) / sizeof(led[0]);
+
+void setup() {
+  for (int i = 0; i < arrayLength; i++) {
+    pinMode(led[i], OUTPUT);
+  }
+}
+
+void red_on()
+{
+  digitalWrite(led[0], HIGH);
+  digitalWrite(led[3], HIGH);
+}
+
+void red_off()
+{
+  digitalWrite(led[0], LOW);
+  digitalWrite(led[3], LOW);
+}
+
+void green_on()
+{
+  digitalWrite(led[1], HIGH);
+  digitalWrite(led[4], HIGH);
+}
+
+void green_off()
+{
+  digitalWrite(led[1], LOW);
+  digitalWrite(led[4], LOW);
+}
+
+void yellow_on()
+{
+  digitalWrite(led[2], HIGH);
+  digitalWrite(led[5], HIGH);
+}
+
+void yellow_off()
+{
+  digitalWrite(led[2], LOW);
+  digitalWrite(led[5], LOW);
+}
+
+void single_blink()
+{
+  for (int i = 0; i < arrayLength; i++) {
+    digitalWrite(led[i], HIGH);
+    delay(500);
+    digitalWrite(led[i], LOW);
+  }
+}
+
+void candleEffect() { 
+  for (int i = 0; i < arrayLength; i++) {
+    int flickerChance = random(0, 10); // 0–9
+    if (flickerChance < 3) { 
+      digitalWrite(led[i], HIGH);
+      delay(random(100, 300)); 
+      digitalWrite(led[i], LOW);
+      delay(random(10, 50));
+    }
+  }
+}
+
+void runningLight() { 
+  for (int i = 0; i < arrayLength; i++){
+    digitalWrite(led[i], HIGH);
+    if ((i-3) < 0)
+    	{digitalWrite(led[arrayLength+(i-3)], LOW);}
+    else
+    	{digitalWrite(led[i-3], LOW);}
+    delay(150);
+  }
+    
+}
+
+void loop() {
+  
+  int potValue = analogRead(A0);
+  int mode = map(potValue, 0, 1023, 0, 4);
+  mode = constrain(mode, 0, 4);
+  
+  if (mode == 0)
+  {    
+    red_on();
+    green_on();
+    yellow_on();
+    delay(300);
+    red_off();
+    green_off();
+    yellow_off();
+    delay(300);
+  }
+  if (mode == 1)
+  {
+    single_blink();
+  }
+  
+  if (mode == 2)
+  {
+    red_on();
+    delay(200);
+    red_off();
+    delay(200);
+    green_on();
+    delay(200);
+    green_off();
+    delay(200);
+    yellow_on();
+    delay(200);
+    yellow_off();
+    delay(200);
+  }
+  if (mode==3)
+  {
+    candleEffect();
+  }
+  if (mode==4)
+  {
+    runningLight();
+  }
+}
+
+  </code></pre>
+</div>
+
+<h2>Video</h2>
+<p>https://youtu.be/68jB9NR2YLA</p>
+
+</body>
+</html>
