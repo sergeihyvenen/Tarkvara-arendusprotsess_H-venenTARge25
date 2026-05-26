@@ -1,35 +1,44 @@
 <!DOCTYPE html>
 <html lang="et">
+
 <head>
-    <style>
-.code-window {
-  background: #1e1e1e;
-  color: #d4d4d4;
-  padding: 12px;
-  border-radius: 8px;
-  font-family: monospace;
 
-  width: 700px;
-  max-height: 600px;
-  overflow: auto;
-
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-}
-        body {
-            font-family: Tahoma, Arial, sans-serif;
-        }
-      </style>
     <meta charset="UTF-8">
+
     <title>Valgusfoor</title>
+
+    <link rel="stylesheet" href="/style.css">
+
+
 </head>
+
 <body>
-<a href="/oppeained/Robootika.html">Tagasi</a>
-<h1>Valgusfoor ülesanne</h1>
 
-<h2>Kood</h2>
+<header class="hero">
 
-<div class="code-window">
-  <pre><code>
+    <h1>Valgusfoor</h1>
+
+    <p>
+        Arduino valgusfoori ülesanne
+    </p>
+
+</header>
+
+<main class="container">
+
+    <section class="card">
+
+        <a class="github-btn" href="/oppeained/Robootika.html">
+            ← Tagasi
+        </a>
+
+        <br><br>
+
+        <h2>Kood</h2>
+
+        <div class="code-window">
+
+<pre><code>
 // VALGUSFOOR
 
 // Autod
@@ -42,113 +51,62 @@ const int jalaRoheline = 9;
 const int jalaPunane = 10;
 
 // Array for pins
-const int pinsArray[] = { autoRoheline, autoKollane, autoPunane, jalaRoheline, jalaPunane };
-const int pinsArray_length = sizeof(pinsArray) / sizeof(pinsArray[0]);
+const int pinsArray[] = {
+  autoRoheline,
+  autoKollane,
+  autoPunane,
+  jalaRoheline,
+  jalaPunane
+};
 
-// SETUP
+const int pinsArray_length =
+sizeof(pinsArray) / sizeof(pinsArray[0]);
+
 void setup()
 {
-  for (int i = 0; i < pinsArray_length; i++) 
+  for (int i = 0; i < pinsArray_length; i++)
   {
     pinMode(pinsArray[i], OUTPUT);
   }
 }
 
-// LOOP
-void loop() 
+void loop()
 {
   paevReziim();
   delay(700);
   ooReziim();
 }
+</code></pre>
 
-// PÄEVAREŽIIM
-void paevReziim()
-{
-  // Kõik OFF
-  digitalWrite(autoRoheline, LOW);
-  digitalWrite(autoKollane, LOW);
-  digitalWrite(autoPunane, LOW);
-  digitalWrite(jalaRoheline, LOW);
-  digitalWrite(jalaPunane, LOW);
-  
-  // autoPunane ja jalaPunane -> ON
-  digitalWrite(autoPunane, HIGH);
-  digitalWrite(jalaPunane, HIGH);
-  delay(2000);
-  
-  // jalaPunane -> jalaRoheline
-  digitalWrite(jalaPunane, LOW);
-  digitalWrite(jalaRoheline, HIGH);
-  delay(2000);
-  
-  // blink + switch
-  cycleBlink(jalaRoheline, jalaPunane);
-  delay(2000);
-  
-  // autoPunane -> autoKollane
-  digitalWrite(autoPunane, LOW);
-  digitalWrite(autoKollane, HIGH);
-  delay(2000);
-  
-  // autoKollane -> autoRoheline
-  digitalWrite(autoKollane, LOW);
-  digitalWrite(autoRoheline, HIGH);
-  delay(2000);
-  
-  // blink + switch
-  cycleBlink(autoRoheline, autoKollane);
-  delay(2000);
-  
-  // autoKollane -> autoPunane
-  digitalWrite(autoKollane, LOW);
-  digitalWrite(autoPunane, HIGH);
-  delay(2000);
-}
+        </div>
 
-// ÖÖREŽIIM
-void ooReziim()
-{
-  // Kõik OFF
-  digitalWrite(autoRoheline, LOW);
-  digitalWrite(autoKollane, LOW);
-  digitalWrite(autoPunane, LOW);
-  digitalWrite(jalaRoheline, LOW);
-  digitalWrite(jalaPunane, LOW);
+    </section>
 
-  // autoKollane blink
-  for (int i = 0; i < 10; i++)
-  {
-    blink(autoKollane);
-  }
-}
+    <section class="card">
 
-// Blink + switch
-void cycleBlink(int colorToBlink, int colorToSwitchTo)
-{
-  blink(colorToBlink);
-  digitalWrite(colorToBlink, LOW);
-  digitalWrite(colorToSwitchTo, HIGH);
-  delay(2000);
-}
+        <h2>Video</h2>
 
-// Blink function
-void blink(int color)
-{
-  for (int i = 0; i < 3; i++)
-  {
-    digitalWrite(color, LOW);
-    delay(500);
-    digitalWrite(color, HIGH);
-    delay(500);
-  }
-}
+        <p>
+            Valgusfoori demonstratsioon video kujul.
+        </p>
 
-  </code></pre>
-</div>
+        <div class="video-wrapper">
 
-<h2>Video</h2>
-<p>https://youtu.be/bTz-iXPwhl0</p>
+            <iframe
+                src="https://www.youtube.com/embed/bTz-iXPwhl0"
+                title="YouTube video player"
+                allowfullscreen>
+            </iframe>
+
+        </div>
+
+    </section>
+
+</main>
+
+<footer class="footer">
+    <p>Sergei Hüvenen ainemapp © 2025</p>
+</footer>
 
 </body>
 </html>

@@ -1,141 +1,122 @@
 <!DOCTYPE html>
 <html lang="et">
 <head>
-    <style>
-        body {
-            font-family: Tahoma, Arial, sans-serif;
-        }
-        table {
-            border-collapse: collapse;
-            width: 100%;
-        }
-        th, td {
-            border: 1px solid black;
-            padding: 8px;
-            vertical-align: top;
-        }
-    </style>
-
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Extreme Programming (XP)</title>
+
+    <link rel="stylesheet" href="../style.css">
 </head>
 
 <body>
 
-<a href="./sdlc.html">Tagasi</a>
+<header class="hero small-hero">
+    <h1>Extreme Programming (XP)</h1>
+    <p>Agiilne meetod kiireks ja kvaliteetseks arenduseks</p>
+</header>
 
-<h1>Mis on Extreme Programming (XP)?</h1>
+<main class="container">
 
-<p>
-Extreme Programming (XP) on agiilne tarkvaraarenduse meetod, mis keskendub kõrge kvaliteediga tarkvara kiirele arendamisele
-ja pidevale tagasisidele. XP eesmärk on parandada arendusprotsessi nii, et muudatused oleksid lihtsad ja odavad ka hilises
-arendusetapis. <br><br>
+    <section class="card">
+        <a class="github-btn" href="./sdlc.html">
+            ← Tagasi
+        </a>
+        <h2>Mis on Extreme Programming (XP)?</h2>
 
-XP rõhutab meeskonnatööd, klientide pidevat kaasamist ning tehnilisi praktikaid, mis aitavad vähendada vigade arvu ja parandada
-koodi kvaliteeti. Erinevalt traditsioonilistest mudelitest eeldab XP, et nõuded võivad muutuda igal ajal ning süsteem peab
-olema selleks valmis. <br><br>
+        <p>
+            Extreme Programming (XP) on agiilne arendusmeetod, mis keskendub kiirele arendusele,
+            pidevale testimisele ja kliendi aktiivsele kaasamisele.
+        </p>
 
-Suurim kasu XP kasutamisel on see, et tarkvara valmib kiiresti, on hästi testitud ning vastab paremini kliendi tegelikele vajadustele.
-</p>
+        <p>
+            XP eesmärk on teha muudatused lihtsaks ja odavaks isegi hilises arendusetapis.
+        </p>
+    </section>
 
-<br/>
+    <section class="card">
+        <h2>XP arendusetapid</h2>
 
-<h2>Extreme Programming (XP) etapid</h2>
+        <ol class="styled-list">
+            <li><b>Planeerimine</b> – kasutajalood ja prioriteedid</li>
+            <li><b>Disain</b> – lihtne ja minimaalne arhitektuur</li>
+            <li><b>Arendus</b> – koodi kirjutamine (tihti pair programming)</li>
+            <li><b>Testimine</b> – automaatsed testid (TDD)</li>
+            <li><b>Tagasiside</b> – pidev kliendi tagasiside</li>
+            <li><b>Väljalase</b> – sagedased ja väikesed versioonid</li>
+        </ol>
+    </section>
 
-<ol>
-    <li>
-        <b>Planeerimine (Planning)</b> – klient ja meeskond määravad kasutajate lood (user stories), mis kirjeldavad,
-        mida süsteem peab tegema. Seejärel hinnatakse nende keerukust ja prioriteeti. Planeerimine on pidev protsess,
-        mitte ühekordne etapp.
-    </li><br>
+    <section class="card">
+        <h2>XP protsessi joonis</h2>
 
-    <li>
-        <b>Disain (Design)</b> – luuakse lihtne ja arusaadav süsteemi struktuur. XP-s eelistatakse lihtsat disaini,
-        mis täidab hetke vajadused, mitte üleliia keerulist arhitektuuri.
-    </li><br>
+        <img src="../pildid/Extreme.webp"
+             alt="Extreme Programming protsess"
+             style="width:100%; height:auto; border-radius:12px;">
+    </section>
 
-    <li>
-        <b>Arendus (Coding)</b> – arendajad kirjutavad koodi, sageli paarisprogrammeerimise (pair programming) abil,
-        kus kaks arendajat töötavad sama koodi kallal. See aitab vähendada vigu ja parandada kvaliteeti.
-    </li><br>
+    <section class="card">
+        <h2>Tähtsaim omadus</h2>
 
-    <li>
-        <b>Testimine (Testing)</b> – testid kirjutatakse enne või koos koodiga (TDD põhimõte). Iga funktsiooni kontrollitakse
-        automaatsete testidega, et tagada korrektne töö.
-    </li><br>
+        <p>
+            XP kõige tähtsam omadus on pidev tagasiside ja kohanemine muutustega.
+        </p>
 
-    <li>
-        <b>Tagasiside (Feedback)</b> – klient annab pidevalt tagasisidet töötava tarkvara kohta. See aitab kiiresti teha
-        muudatusi ja parandada toodet vastavalt tegelikele vajadustele.
-    </li><br>
+        <ul>
+            <li>nõuded võivad muutuda igal ajal</li>
+            <li>vead leitakse varakult</li>
+            <li>klient on pidevalt kaasatud</li>
+            <li>arendus on kiire ja paindlik</li>
+        </ul>
+    </section>
 
-    <li>
-        <b>Väljalase (Release)</b> – töötav tarkvara antakse kasutajatele väikeste ja sagedaste versioonidena. See võimaldab
-        kiiret arendust ja pidevat täiustamist.
-    </li>
-</ol>
+    <section class="card">
+        <h2>Head ja vead</h2>
 
-<br/>
+        <div class="table-wrapper">
+            <table>
+                <tr>
+                    <th>Head</th>
+                    <th>Vead</th>
+                </tr>
+                <tr>
+                    <td>
+                        <ul>
+                            <li>Väga kiire arendus</li>
+                            <li>Pidev testimine</li>
+                            <li>Kõrge koodi kvaliteet</li>
+                            <li>Kliendi kaasatus</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>Nõuab distsipliini</li>
+                            <li>Raske suurtes projektides</li>
+                            <li>Vajab kliendi kohalolu</li>
+                            <li>Ressursimahukas</li>
+                        </ul>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </section>
 
-<h2>XP arendusprotsessi joonis</h2>
+    <section class="card">
+        <h2>Allikad</h2>
 
- <img src="../pildid/Extreme.webp" alt="">
+        <div class="links">
+            <a href="https://www.geeksforgeeks.org/software-engineering/software-engineering-extreme-programming-xp/" target="_blank">
+                GeeksforGeeks – Extreme Programming
+            </a>
+        </div>
+    </section>
 
-<br/>
 
-<h2>XP kõige tähtsam omadus</h2>
 
-<p>
-Extreme Programmingu kõige tähtsam omadus on <b>pidev tagasiside ja kohanemine muutustega</b>.
-</p>
+</main>
 
-<p>
-See on oluline, sest:
-</p>
-
-<ul>
-    <li>nõuded võivad muutuda igal ajal</li>
-    <li>vead leitakse varakult läbi testimise</li>
-    <li>kliendi kaasatus tagab parema tulemuse</li>
-    <li>arendus on kiire ja paindlik</li>
-</ul>
-
-<br/>
-
-<h2>XP head ja vead</h2>
-
-<table>
-    <tr>
-        <th>Head</th>
-        <th>Vead</th>
-    </tr>
-    <tr>
-        <td>
-            <ul>
-                <li>Väga kiire arendus</li>
-                <li>Pidev testimine</li>
-                <li>Hea koodi kvaliteet</li>
-                <li>Kliendi pidev kaasatus</li>
-            </ul>
-        </td>
-        <td>
-            <ul>
-                <li>Nõuab väga distsiplineeritud meeskonda</li>
-                <li>Raske suurtes projektides</li>
-                <li>Vajab pidevat kliendi kohalolu</li>
-                <li>Võib olla ressursimahukas</li>
-            </ul>
-        </td>
-    </tr>
-</table>
-
-<br/>
-
-<h2>Allikad</h2>
-
-<ul>
-<li><a href="https://www.geeksforgeeks.org/software-engineering/software-engineering-extreme-programming-xp/">GeeksforGeeks - Extreme Programming</a></li>
-</ul>
+<footer class="footer">
+    <p>Sergei Hüvenen ainemapp © 2025</p>
+</footer>
 
 </body>
 </html>

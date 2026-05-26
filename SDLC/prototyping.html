@@ -1,58 +1,83 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="et">
 <head>
-    <style>
-        body {
-            font-family: Tahoma, Arial, sans-serif;
-        }
-      </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prototüüpimine</title>
+
+    <link rel="stylesheet" href="../style.css">
 </head>
+
 <body>
-    <a href="./sdlc.html">Tagasi</a>
-<h1>Prototüüpimine arendusmudel</h1>
-<p>
-    Prototüüpimine on tarkvaraarenduse meetod, kus luuakse süsteemist varajane ja lihtsustatud mudel,<br>
-     et paremini mõista kasutaja vajadusi ja katsetada lahenduse ideid. Prototüübi eesmärk on kiiresti näidata,<br>
-      kuidas süsteem võiks välja näha ja toimida, et saada tagasisidet enne lõpliku süsteemi arendamist.<br>
-    Prototüüpimine muudab arenduse paindlikumaks, sest nõudeid ja lahendusi saab jooksvalt täiustada.
-</p><br><br>
-<h2>Mis on prototüüpimise etapid?</h2>
-<p>
-    Prototüüpimine koosneb mitmest korduvast etapist,<br>
-     mida tehakse seni, kuni lahendus vastab kasutaja ootustele.<br>
-      Peamised sammud on: nõuete kogumine, kiire kavandamine, prototüübi loomine, hindamine ja täiustamine.
-</p><br><br>
-<h2>1. Etapp - Nõuete kogunemine</h2>
-<p>
-    Selles sammus selgitatakse välja esialgsed kasutaja vajadused.<br>
-     Ei pea olema täielikke ja lõplikke nõudeid - oluline on mõista põhiideed, mida süsteem peab suutma.
-</p><br><br>
-<h2>2. Etapp - Kiire kavandamine</h2>
-<p>Koostatakse lihtne visand või plaan, mis kirjeldab süsteemi<br>
- põhielemente: sisendeid, väljundeid, funktsioone või kasutajaliidest. Selle alusel ehitatakse esimene prototüüp.
- </p><br><br>
- <h2>3. Etapp - Prototüübi loomine</h2>
- <p>
-    Valmib süsteemi esialgne mudel, mis võib olla nii paberil visand,<br>
-     klõpsitav ekraanivaade kui ka lihtne töötav programmiosa. Prototüüp ei ole lõplik - see on vaid ideede katsetamiseks.
- </p><br><br>
- <h2>4. Etapp - Kasutaja hindamine</h2>
- <p>
-    Prototüüp antakse kasutajale testimiseks. Tagasiside põhjal selgitatakse välja,<br>
-     kas lahendus vastab vajadustele, mis töötab hästi ja mida tuleks muuta.
- </p><br><br>
- <h2>5. Etapp - Täiustamine</h2>
- <p>
-    Prototüüpi muudetakse, täpsustatakse ja vajadusel luuakse uus versioon. Protsessi korratakse seni,<br>
-     kuni lahendus saavutab soovitud kuju. Alles seejärel alustatakse lõpliku süsteemi arendamist.
- </p><br><br>
- <h2>Arendusmudeli joonis:</h2>
- <img src="../pildid/image5.jpeg" alt="">
- <br><br>
- Viited infole:
-    <a href="https://eopearhiiv.edu.ee/e-kursused/eucip/arendus/1224_prototpimine.html">E-õpearhiiv</a> 
+
+<header class="hero small-hero">
+    <h1>Prototüüpimine</h1>
+    <p>Kiire arendus mudel ideede testimiseks ja täiustamiseks</p>
+</header>
+
+<main class="container">
+
+    <section class="card">
+        <a class="github-btn" href="./sdlc.html">
+            ← Tagasi
+        </a>
+        <h2>Mis on prototüüpimine?</h2>
+
+        <p>
+            Prototüüpimine on arendusmeetod, kus luuakse lihtsustatud mudel süsteemist,
+            et testida ideid ja saada varajast tagasisidet.
+        </p>
+
+        <p>
+            See aitab mõista kasutaja vajadusi enne lõpliku süsteemi arendamist.
+        </p>
+    </section>
+
+    <section class="card">
+        <h2>Prototüüpimise etapid</h2>
+
+        <ol class="styled-list">
+            <li><b>Nõuete kogumine</b> – esmased kasutaja vajadused</li>
+            <li><b>Kiire kavandamine</b> – lihtne disain või visand</li>
+            <li><b>Prototüübi loomine</b> – esialgne tööversioon</li>
+            <li><b>Hindamine</b> – kasutaja tagasiside</li>
+            <li><b>Täiustamine</b> – korduv parandamine</li>
+        </ol>
+    </section>
+
+    <section class="card">
+        <h2>Prototüübi joonis</h2>
+
+        <img src="../pildid/image5.jpeg"
+             alt="Prototüüpimise mudel"
+             style="width:100%; height:auto; border-radius:12px;">
+    </section>
+
+    <section class="card">
+        <h2>Töö põhimõte</h2>
+
+        <p>
+            Prototüüpimine on iteratiivne protsess, kus mudelit parandatakse kuni see vastab kasutaja ootustele.
+        </p>
+    </section>
+
+    <section class="card">
+        <h2>Allikas</h2>
+
+        <div class="links">
+            <a href="https://eopearhiiv.edu.ee/e-kursused/eucip/arendus/1224_prototpimine.html" target="_blank">
+                EUCIP – Prototüüpimine
+            </a>
+        </div>
+    </section>
+
+
+
+</main>
+
+<footer class="footer">
+    <p>Sergei Hüvenen ainemapp © 2025</p>
+</footer>
+
 </body>
 </html>

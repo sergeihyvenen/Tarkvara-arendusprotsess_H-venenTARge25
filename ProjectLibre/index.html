@@ -2,16 +2,42 @@
 <html lang="et">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Serveritarkvara paigaldamine</title>
-</head>
-<body>
-<a href="../index.html">Tagasi</a>
-    <h1>Serveritarkvara paigaldamine</h1>
-    <p>Vali tegevus, et näha raportit või alla laadida projektifail:</p>
 
-    <button onclick="window.open('project-details.html', '_blank')">Project Details</button>
-    <button onclick="window.open('Who-does-what.html', '_blank')">Who Does What</button>
-    <button onclick="window.location.href='Serveritarkvara paigaldamine.pod'">Download .pod file</button>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+<header class="hero">
+    <h1>Serveritarkvara paigaldamine</h1>
+    <p>Vali tegevus, et näha raportit või alla laadida projektifail</p>
+</header>
+
+<main class="container">
+
+    <section class="card">
+
+         <a class="github-btn" href="../index.html">
+            ← Tagasi
+        </a>
+        <h2>Projekt</h2>
+
+        <div class="links">
+            <a href="project-details.html" target="_blank">Project Details</a>
+            <a href="Who-does-what.html" target="_blank">Who Does What</a>
+            <a href="Serveritarkvara paigaldamine.pod" download>
+                Download .pod file
+            </a>
+        </div>
+    </section>
+
+</main>
+
+<footer class="footer">
+    <p>Sergei Hüvenen ainemapp © 2025</p>
+</footer>
 
 </body>
 </html>

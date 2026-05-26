@@ -1,122 +1,118 @@
 <!DOCTYPE html>
 <html lang="et">
 <head>
-    <style>
-        body {
-            font-family: Tahoma, Arial, sans-serif;
-        }
-        table {
-            border-collapse: collapse;
-            width: 100%;
-        }
-        th, td {
-            border: 1px solid black;
-            padding: 8px;
-            vertical-align: top;
-        }
-    </style>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Big Bang arendusmudel</title>
+
+    <link rel="stylesheet" href="../style.css">
 </head>
 
 <body>
 
-<a href="./sdlc.html">Tagasi</a>
+<header class="hero small-hero">
+    <h1>Big Bang arendusmudel</h1>
+    <p>Lihtne ja kiire, kuid riskantne arendusmudel</p>
+</header>
 
-<h1>Mis on Big Bang arendusmudel?</h1>
+<main class="container">
 
-<p>
-Big Bang arendusmudel on tarkvaraarenduse mudel, kus arendus algab väga vähese või peaaegu olematu planeerimisega.
-Arendajad hakkavad kohe koodi kirjutama ja süsteemi looma ilma selge struktuuri või detailse nõuete analüüsita.
-</p>
+    <section class="card">
+         <a class="github-btn" href="./sdlc.html">
+            ← Tagasi
+        </a>
+        <h2>Mis on Big Bang arendusmudel?</h2>
 
-<p>
-Seda mudelit kasutatakse tavaliselt väikestes projektides, prototüüpides või õppimise eesmärgil, kus nõuded ei ole täpselt teada.
-Suuremate süsteemide puhul on see väga riskantne, sest lõpptulemus võib erineda algsest ideest.
-</p>
+        <p>
+            Big Bang arendusmudel on tarkvaraarenduse lähenemine, kus arendus algab ilma põhjaliku planeerimiseta.
+            Arendajad hakkavad kohe koodi kirjutama ning süsteem kujuneb töö käigus.
+        </p>
 
-<br/>
+        <p>
+            Seda kasutatakse peamiselt väikestes projektides või prototüüpides, kus nõuded ei ole täpselt teada.
+        </p>
+    </section>
 
-<h2>Big Bang arenduse etapid</h2>
+    <section class="card">
+        <h2>Arenduse etapid</h2>
 
-<p>
-Big Bang mudelil ei ole kindlat SDLC struktuuri, kuid protsessi saab üldiselt kirjeldada järgmiselt:
-</p>
+        <ol class="styled-list">
+            <li><b>Idee algus</b> – üldine idee ilma detailse analüüsita</li>
+            <li><b>Arenduse alustamine</b> – koodi kirjutamine kohe alguses</li>
+            <li><b>Funktsioonide lisamine</b> – süsteemi järk-järguline ehitamine</li>
+            <li><b>Testimine</b> – testimine arenduse käigus või lõpus</li>
+            <li><b>Parandamine</b> – vigade parandamine pärast testimist</li>
+        </ol>
+    </section>
 
-<ol>
-    <li><b>Idee algus</b> – tekib üldine idee, kuid nõudeid ei analüüsita põhjalikult.</li>
-    <li><b>Arenduse alustamine</b> – arendajad hakkavad kohe koodi kirjutama ilma detailse plaanita.</li>
-    <li><b>Funktsioonide lisamine</b> – süsteemi ehitatakse samm-sammult vastavalt vajadusele.</li>
-    <li><b>Testimine</b> – testimine toimub arenduse käigus või lõpus.</li>
-    <li><b>Parandamine</b> – vigade leidmine ja parandamine pärast testimist.</li>
-</ol>
+    <section class="card">
+        <h2>Big Bang diagramm</h2>
 
-<br/>
+        <img src="../pildid/bigbang.png"
+             alt="Big Bang arendusmudel"
+             style="width:100%; height:auto; border-radius:12px;">
+    </section>
 
-<h2>Big Bang arenduse joonis</h2>
+    <section class="card">
+        <h2>Tähtsaim omadus</h2>
 
- <img src="../pildid/bigbang.png" alt="">
+        <p>
+            Big Bang mudeli kõige tähtsam omadus on kiire alustamine ilma detailse planeerimiseta.
+        </p>
 
-<br/>
+        <p>
+            See sobib väikeste projektide jaoks, kuid suurtes süsteemides on see väga riskantne.
+        </p>
+    </section>
 
-<h2>Tähtsaim omadus ja miks?</h2>
+    <section class="card">
+        <h2>Head ja vead</h2>
 
-<p>
-Big Bang mudeli tähtsaim omadus on väga kiire alustamine ilma detailse planeerimiseta.
-</p>
+        <div class="table-wrapper">
+            <table>
+                <tr>
+                    <th>Head</th>
+                    <th>Vead</th>
+                </tr>
+                <tr>
+                    <td>
+                        <ul>
+                            <li>Kiire algus</li>
+                            <li>Vähe planeerimist</li>
+                            <li>Lihtne kasutada</li>
+                            <li>Sobib prototüüpidele</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>Suur risk ebaõnnestuda</li>
+                            <li>Puudub struktuur</li>
+                            <li>Raske hallata suuri projekte</li>
+                            <li>Lõpptulemus võib olla ettearvamatu</li>
+                        </ul>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </section>
 
-<p>
-See on oluline, sest:
-</p>
+    <section class="card">
+        <h2>Allikad</h2>
 
-<ul>
-    <li>arendust saab alustada kohe</li>
-    <li>nõuded ei pea olema täpselt teada</li>
-    <li>sobib väikeste ja lihtsate projektide jaoks</li>
-</ul>
+        <div class="links">
+            <a href="https://www.geeksforgeeks.org/software-engineering/overview-of-big-bang-model/" target="_blank">
+                GeeksforGeeks – Big Bang Model
+            </a>
+        </div>
+    </section>
 
-<p>
-Samas on see mudel ebastabiilne suurte projektide jaoks, sest kontroll protsessi üle on väike.
-</p>
 
-<br/>
 
-<h2>Heade ja Veade tabel</h2>
+</main>
 
-<table>
-    <tr>
-        <th>Head</th>
-        <th>Vead</th>
-    </tr>
-    <tr>
-        <td>
-            <ul>
-                <li>Kiire algus</li>
-                <li>Vähe planeerimist</li>
-                <li>Lihtne kasutada</li>
-                <li>Sobib prototüüpideks</li>
-            </ul>
-        </td>
-        <td>
-            <ul>
-                <li>Suur risk ebaõnnestuda</li>
-                <li>Puudub struktuur</li>
-                <li>Raske hallata suuri projekte</li>
-                <li>Lõpptulemus võib olla ettearvamatu</li>
-            </ul>
-        </td>
-    </tr>
-</table>
-
-<br/>
-
-<h2>Allikad</h2>
-
-<ul>
-    <li><a href="https://www.geeksforgeeks.org/software-engineering/overview-of-big-bang-model/">GeeksforGeeks – Big Bang Model</a></li>
-</ul>
+<footer class="footer">
+    <p>Sergei Hüvenen ainemapp © 2025</p>
+</footer>
 
 </body>
 </html>

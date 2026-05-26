@@ -1,61 +1,105 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="et">
 <head>
-    <style>
-        body {
-            font-family: Tahoma, Arial, sans-serif;
-        }
-      </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minu Tarkvara Arendusprotsessi Ainemapp</title>
+    <title>Ainemapp</title>
+
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<h1>Tarkvara Arendusprotsessi tunni raames koostatud ainemapp</h1>
-<br>
-<p>
-Tarkvara Arendusprotsessi aines tehtud ainemapp kus on selle aine ja kõikide teiste ainete ülesanded ja muud saavutused kuvatud.   
-</p>
-<h2>Tarkvara Arendusprotsess:
-    <h3>Teooria:</h3>
-    <a href="./SDLC/sdlc.html">Üldiselt mis see on</a>
-    <a href="./CASE/index.html">CASE-vahendid.</a>
-    <a href="./UML/index.html">Unified Modeling Language.</a>
-    <a href="./Documentation/index.html">Dokumentatsioon</a>
+
+<div class="overlay"></div>
+
+<header class="hero">
+    <h1>Ainemapp</h1>
+    <p>Tarkvara Arendusprotsessi aine jooksul tehtud tööd ja projektid</p>
+</header>
+
+<main class="container">
+
+    <section class="card">
+        <h2>Teooria</h2>
+
+        <div class="links">
+            <a href="./SDLC/sdlc.html">SDLC</a>
+            <a href="./CASE/index.html">CASE-vahendid</a>
+            <a href="./UML/index.html">UML</a>
+            <a href="./Documentation/index.html">Dokumentatsioon</a>
+        </div>
+    </section>
+
+    <section class="card">
+        <h2>Praktiline rakendus</h2>
+
+        <div class="links">
+            <a href="./BTC/index.html">Bitcoin kalkulaator</a>
+            <a href="./ProjectLibre/index.html">ProjectLibre</a>
+        </div>
+    </section>
+
+    <section class="card">
+        <h2>Õppeained</h2>
+
+        <div class="links">
+            <a href="#">Programmeerimise alused</a>
+            <a href="#">Multimeedia</a>
+            <a href="./oppeained/IT_taristu.html">IT taristu</a>
+            <a href="./oppeained/Robootika.html">Robootika</a>
+        </div>
+    </section>
+
+    <section class="profile-card">
+        <div class="profile-text">
+            <h2>Kes ma olen</h2>
+
+            <p><span>Nimi:</span> Sergei Hüvenen</p>
+            <p><span>Amet:</span> TTHK õpilane</p>
+            <p><span>Linn:</span> Tartu</p>
+
+            <a class="github-btn" href="https://github.com/sergeihyvenen" target="_blank">
+                GitHub
+            </a>
+        </div>
+
+        <img src="./pildid/Profile pic2.jpg" alt="Profile pic" style="width:180px; height:auto;">   
+    </section>
+
+</main>
+
+<section class="card">
+    <h2>Networking</h2>
+
+    <div class="network-grid">
+        <a href="https://marcusgrunberg24.thkit.ee/">Marcus Grünberg</a>
+        <a href="https://sergeihuvenen25.thkit.ee/">Sergei Hüvenen</a>
+        <a href="https://vladkangur25.thkit.ee/">Vlad Kangur</a>
+        <a href="https://ristokivistik25.thkit.ee/">Risto Kivistik</a>
+        <a href="https://anvarkubja25.thkit.ee/">Anvar Kubja</a>
+        <a href="https://kristokundrats25.thkit.ee/">Kristo Kundrats</a>
+        <a href="https://henrykuningas25.thkit.ee/">Henry Kuningas</a>
+        <a href="https://katrilotamois24.thkit.ee/">Katri Lotamõis</a>
+        <a href="https://villemjohannesmannard25.thkit.ee/index.html">Villem Männard</a>
+        <a href="https://lieramishkurova25.thkit.ee/">Liera Mishkurova</a>
+        <a href="https://liisinurk25.thkit.ee/">Liisi Nurk</a>
+        <a href="https://rasmusolesk25.thkit.ee/">Rasmus Olesk</a>
+        <a href="https://stiivenottens25.thkit.ee/">Stiiven Ottens</a>
+        <a href="https://martingertpuura25.thkit.ee/">Martin Gert Puura</a>
+        <a href="https://kerlyritsu25.thkit.ee/">Kerly Ritsu</a>
+        <a href="https://jurisarki25.thkit.ee/">Juri Särki</a>
+        <a href="https://rihosepp25.thkit.ee/">Riho Sepp</a>
+        <a href="https://romeosergejev25.thkit.ee/">Romeo Sergejev</a>
+        <a href="https://stenronansiiman25.thkit.ee/">Sten Ronan Siiman</a>
+        <a href="https://sigridsormus25.thkit.ee/">Sigrid Sõrmus</a>
+        <a href="https://robinmarcussusi25.thkit.ee/">Robin Marcus Susi</a>
+        <a href="https://aleksandrvassiljuk25.thkit.ee/">Aleksandr Vassiljuk</a>
+    </div>
+</section>
 
 
-    <h3>Praktiline rakendus:</h3>
-    <a href="./BTC/index.html">Bitcoin kalkulaator</a>
-    <a href="./ProjectLibre/index.html">ProjectLibre</a>
+<footer class="footer">
+    <p>Sergei Hüvenen ainemapp © 2025</p>
+</footer>
 
-    <h3>Õppeained:</h3>
-    <a href="">Programmeerimise alused</a>
-    <a href="">Multimeedia</a>
-    <a href="./oppeained/IT_taristu.html">IT organisatsiooni juhtimine ja taristu</a>
-    <a href="./oppeained/Robootika.html">Robootika</a>
-</h2>
-<br>
----------------------------------------------------
-<h2>Kes ma olen:</h2>
-<table>
-    <tr>
-        <td>Minu nimi</td>
-        <td>Mida ma teen:</td>
-        <td>Kus ma tulen:</td>
-        <td>Pilt</td>
-    </tr>
-    <tr>
-        <td>Sergei Hüvenen</td>
-        <td>Olen TTHK õpilane</td>
-        <td>Tulen Tartust</td>
-        <td> <img height="240" src="./pildid/Profile pic2.jpg"/> </td>
-    </tr>
-    <tr>
-        <td colspan="4">
-            <a href="https://github.com/sergeihyvenen">Minu githubi link</a>
-        </td>
-    </tr>
-
-</table>
 </body>
 </html>

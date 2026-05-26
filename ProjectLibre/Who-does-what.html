@@ -2,35 +2,72 @@
 <html lang="et">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Who Does What</title>
+
+    <link rel="stylesheet" href="../style.css">
+
     <script>
-        let pics = ["../pildid/Whodoeswhat.png", "../pildid/Whodoeswhat2.png", "../pildid/whodoeswhat3.png"];
+        let pics = [
+            "../pildid/Whodoeswhat.png",
+            "../pildid/Whodoeswhat2.png",
+            "../pildid/whodoeswhat3.png"
+        ];
+
         let currentIndex = 0;
+
+        function showImage(index) {
+            const img = document.getElementById("whoPic");
+            img.src = pics[index];
+        }
 
         function showNext() {
             currentIndex = (currentIndex + 1) % pics.length;
-            document.getElementById("whoPic").src = pics[currentIndex];
+            showImage(currentIndex);
         }
 
         function showPrev() {
             currentIndex = (currentIndex - 1 + pics.length) % pics.length;
-            document.getElementById("whoPic").src = pics[currentIndex];
+            showImage(currentIndex);
         }
 
-        window.onload = function() {
-            document.getElementById("whoPic").src = pics[0];
+        window.onload = function () {
+            showImage(0);
         }
     </script>
 </head>
+
 <body>
-<a href="./index.html">Tagasi</a>
-<h1>Who Does What</h1>
-<p>Kasuta nuppe piltide vahetamiseks:</p>
 
-<img id="whoPic" alt="Who Does What" style="max-width:100%; height:auto; display:block; margin-bottom:10px;">
+<header class="hero">
+    <h1>Who Does What</h1>
+    <p>Projekti rollide ja tööjaotuse ülevaade</p>
+</header>
 
-<button onclick="showPrev()">Previous</button>
-<button onclick="showNext()">Next</button>
+<main class="container">
+
+    <section class="card">
+                 <a class="github-btn" href="../index.html">
+            ← Tagasi
+        </a>
+        <h2>Pildigalerii</h2>
+
+        <img id="whoPic"
+             alt="Who Does What"
+             style="width:100%; height:auto; border-radius:12px; margin-bottom:15px;">
+
+        <div class="links" style="justify-content:center;">
+            <a href="#" onclick="showPrev(); return false;">← Previous</a>
+            <a href="#" onclick="showNext(); return false;">Next →</a>
+        </div>
+    </section>
+
+
+</main>
+
+<footer class="footer">
+    <p>Sergei Hüvenen ainemapp © 2025</p>
+</footer>
 
 </body>
 </html>

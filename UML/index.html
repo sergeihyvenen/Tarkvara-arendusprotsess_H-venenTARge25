@@ -1,93 +1,256 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="et">
+
 <head>
-    <style>
-        body {
-            font-family: Tahoma, Arial, sans-serif;
-        }
-      </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UML diagrammikeel</title>
+
+    <title>UML</title>
+
+    <link rel="stylesheet" href="../style.css">
 </head>
+
 <body>
-    <a href="../index.html">Tagasi</a>
-    <h1>UML diagrammikeel</h1><br/>
-    <br/><br/>
-    <h1>Mis on UML?</h1><br/>
+
+<header class="hero">
+
+    <h1>UML</h1>
+
     <p>
-        UML on visuaalne modelleerimiskeel, mis aitab tarkvaraarenduses nii kliendile, arendajale endale kui<br/>
-        ka erinevatele muudele isikutele protsessi juures kuvada täpsemalt, milline arendatava toote sisemine<br/>
-        struktuur erinevatel tasanditel olema peaks. UML on aga ka haruskeel, ehk teisisõnu on erinevaid<br/>
-        diagrammiliike nende erinevate tasandite kuvamise jaoks väga palju. UML defineerib ära nende erinevate<br/>
-        tasandite diagrammide notatsioonid, keskendudes siis nendel spetsiifilistel tasemetel vajamineva <br/>
-        kirjeldusele. Tarkvaratoote käitumise kirjeldamiseks on näiteks käitumisdiagramm, andmestruktuuri <br/>
-        kirjeldamiseks on näiteks olemidiagramm (ERD). Ja nii, erinevate aspektide kohta. UMLe kasutatakse<br/>
-        nii uue arendustöö kirjeldamiseks kui ka olemasoleva dokumenteerimiseks.
-    </p><br/><br/>
-    <h1>Kuidas UML tekkis?</h1><br/>
-    <p>
-        UML tekkis vajadusest kujutada objektorienteeritud programmeerimise jaoks ühtset keelt, mis kuvaks<br/>
-        protsessi ilma koodita. Algselt tekkis see kui Grady Booch ja James Rumbaugh ühendasid oma diagrammikeeled,<br/>
-        kuhu siis aja jooksul tekkiski teisi harusid juurde. UML ise on akronüüm ingliskeelsest terminist<br/>
-        "Unified Modeling Language".
-    </p><br/><br/>
-    <h1>Mida saab kujutada UMLiga - ehk kui palju diagrammide liike olemas on?</h1><br/>
-    <p>
-        Erinevaid UML liike on palju, näiteks:
-        <ul>
-            <li><a href="flowchart.html">Vooskeem (Flowchart)</a></li>
-            <li>Klassidiagramm (Class diagram)</li>
-            <li>Objekti diagramm (Object Diagram)</li>
-            <li>Koostöödiagramm (Collaboration Diagram)</li>
-            <li><a href="erd.html">Olemidiagramm (Entity Relation Diagram)</a></li>
-            <li>Kasutuslooskeem (Use Case Diagram)</li>
-            <li>Olekuskeem (State Diagram)</li>
-            <li>Tegevusdiagramm (Activity Diagram)</li>
-            <li>Komponendi Diagramm (Component Diagram)</li>
-            <li>Kommunikatsioonidiagramm (Communication Diagram)</li>
-            <li>Ajastusskeem (Timing Diagram)</li>
-            <li>Jadaskeem (Sequence Diagram)</li>
-            <li>Levitusskeem (Deployment Diagram)</li>
-            <li>Paketiskeem (Package Diagram)</li>
-            <li>Profiilidiagramm (Profile Diagram)</li>
-        </ul>
+        Unified Modeling Language ja diagrammide maailm
     </p>
-    <h1>Mõningaid UML liike</h1><br/>
-    <h2>Kasutuslooskeem (Use Case Diagram)</h2><br/>
-    <p>
-        <strong>Lühikirjeldus:</strong> Näitab süsteemi aktoreid (kasutajad, süsteemid) ja nende toiminguid.<br/>
-        <strong>Kujundite/joonte seletus:</strong> Aktor on tulpikujuline inimene, süsteem on ristkülik, seosed näidatud joonega, mis võib olla nool või lihtjoon.<br/>
-        <strong>Näidisjoonis:</strong><br/>
-        <img src="../pildid/usecase-example.png" width="400" alt="Use Case diagramm näidis">
-    </p><br/>
-    <h2>Klassidiagramm (Class Diagram)</h2><br/>
-    <p>
-        <strong>Lühikirjeldus:</strong> Näitab süsteemi klasse, atribuute, meetodeid ja seoseid klasside vahel.<br/>
-        <strong>Kujundite/joonte seletus:</strong> Klass on ristkülik, jagatud kolmeks osaks (nimi, atribuudid, meetodid), seosed võivad olla assotsiatsioonid, pärilikkus või kompositsioon.<br/>
-        <strong>Näidisjoonis:</strong><br/>
-        <img src="../pildid/class-example.png" width="400" alt="Class diagramm näidis">
-    </p><br/>
-    <h2>Jadaskeem (Sequence Diagram)</h2><br/>
-    <p>
-        <strong>Lühikirjeldus:</strong> Näitab objektide vahelisi sõnumeid ajas, kuidas nad suhtlevad.<br/>
-        <strong>Kujundite/joonte seletus:</strong> Objektid on horisontaalselt üleval ristkülikutena, sõnumid on vertikaalsed nooled ajateljel.<br/>
-        <strong>Näidisjoonis:</strong><br/>
-        <img src="../pildid/sequence-example.png" width="400" alt="Sequence diagramm näidis">
-    </p><br/>
-    <h2>Olekuskeem (State Diagram)</h2><br/>
-    <p>
-        <strong>Lühikirjeldus:</strong> Näitab objekti olekuid ja nende vahelisi üleminekuid.<br/>
-        <strong>Kujundite/joonte seletus:</strong> Olek on ovaal, algus ja lõpp on täisringid, üleminekud on nooled koos sündmustega.<br/>
-        <strong>Näidisjoonis:</strong><br/>
-        <img src="../pildid/state-example.png" width="400" alt="State diagramm näidis">
-    </p><br/>
-    <h2>Tegevusdiagramm (Activity Diagram)</h2><br/>
-    <p>
-        <strong>Lühikirjeldus:</strong> Näitab tegevuste voogu, otsuseid ja paralleelset tegevust.<br/>
-        <strong>Kujundite/joonte seletus:</strong> Tegevus on ristkülik, otsus on romb, voog on nool.<br/>
-        <strong>Näidisjoonis:</strong><br/>
-        <img src="../pildid/activity-example.png" width="400" alt="Activity diagramm näidis">
-    </p><br/>
+
+</header>
+
+<main class="container">
+
+    <section class="card">
+
+        <a class="github-btn" href="../index.html">
+            ← Tagasi
+        </a>
+
+        <br><br>
+
+        <h2>Mis on UML?</h2>
+
+        <p>
+            UML on visuaalne modelleerimiskeel,
+            mida kasutatakse tarkvaraarenduses süsteemide,
+            protsesside ja arhitektuuri kirjeldamiseks.
+        </p>
+
+        <br>
+
+        <p>
+            UML aitab arendajatel, klientidel ja
+            süsteemiarhitektidel mõista,
+            kuidas tarkvara töötab ning kuidas
+            selle erinevad osad omavahel suhtlevad.
+        </p>
+
+    </section>
+
+    <section class="card">
+
+        <h2>Kuidas UML tekkis?</h2>
+
+        <p>
+            UML tekkis vajadusest luua ühtne keel
+            objektorienteeritud süsteemide modelleerimiseks.
+        </p>
+
+        <br>
+
+        <p>
+            Selle lõid Grady Booch ja James Rumbaugh,
+            ühendades erinevad diagrammikeeled üheks standardiks.
+        </p>
+
+    </section>
+
+    <section class="card">
+
+        <h2>Diagrammide tüübid</h2>
+
+        <p>
+            UML sisaldab palju erinevaid diagrammiliike.
+        </p>
+
+        <br>
+
+        <div class="links">
+
+            <a href="flowchart.html">
+                Flowchart
+            </a>
+
+            <a href="erd.html">
+                ERD Diagram
+            </a>
+
+            <a href="#">
+                Class Diagram
+            </a>
+
+            <a href="#">
+                Use Case Diagram
+            </a>
+
+            <a href="#">
+                Sequence Diagram
+            </a>
+
+            <a href="#">
+                Activity Diagram
+            </a>
+
+            <a href="#">
+                State Diagram
+            </a>
+
+            <a href="#">
+                Deployment Diagram
+            </a>
+
+        </div>
+
+    </section>
+
+    <section class="card">
+
+        <h2>Kasutuslooskeem</h2>
+
+        <p>
+            Use Case Diagram näitab süsteemi kasutajaid
+            ja nende tegevusi süsteemis.
+        </p>
+
+        <br>
+
+        <div class="image-grid">
+
+            <div class="image-card">
+
+                <h3>Use Case Diagram</h3>
+
+                <img src="../pildid/usecase-example.png"
+                     alt="Use Case diagram">
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="card">
+
+        <h2>Klassidiagramm</h2>
+
+        <p>
+            Class Diagram kirjeldab klasse,
+            atribuute, meetodeid ja seoseid klasside vahel.
+        </p>
+
+        <br>
+
+        <div class="image-grid">
+
+            <div class="image-card">
+
+                <h3>Class Diagram</h3>
+
+                <img src="../pildid/class-example.png"
+                     alt="Class diagram">
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="card">
+
+        <h2>Jadaskeem</h2>
+
+        <p>
+            Sequence Diagram näitab objektide vahelisi
+            sõnumeid ja suhtlust ajas.
+        </p>
+
+        <br>
+
+        <div class="image-grid">
+
+            <div class="image-card">
+
+                <h3>Sequence Diagram</h3>
+
+                <img src="../pildid/sequence-example.png"
+                     alt="Sequence diagram">
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="card">
+
+        <h2>Olekuskeem</h2>
+
+        <p>
+            State Diagram kirjeldab objekti olekuid
+            ja nendevahelisi üleminekuid.
+        </p>
+
+        <br>
+
+        <div class="image-grid">
+
+            <div class="image-card">
+
+                <h3>State Diagram</h3>
+
+                <img src="../pildid/state-example.png"
+                     alt="State diagram">
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="card">
+
+        <h2>Tegevusdiagramm</h2>
+
+        <p>
+            Activity Diagram näitab tegevuste voogu,
+            otsuseid ja protsesside loogikat.
+        </p>
+
+        <br>
+
+        <div class="image-grid">
+
+            <div class="image-card">
+
+                <h3>Activity Diagram</h3>
+
+                <img src="../pildid/activity-example.png"
+                     alt="Activity diagram">
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+<footer class="footer">
+    <p>Sergei Hüvenen ainemapp © 2025</p>
+</footer>
 </body>
+
 </html>

@@ -1,131 +1,186 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="et">
 <head>
-    <style>
-        body {
-            font-family: Tahoma, Arial, sans-serif;
-        }
-      </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CASE-Vahendid</title>
+
+    <title>CASE-vahendid</title>
+
+    <link rel="stylesheet" href="../style.css">
 </head>
+
 <body>
-    <a href="../index.html">Tagasi</a>
-    <h1>Mis on CASE vahendid?</h1><br/>
-    <p>
-            Tarkvaraarenduse elutsükkel koosneb erinevatest etappidest, milles tehtavad tegevused on väga <br/>
-        erinevad, kuid igas etapis on siiski arendatava tarkvara jaoks vajalikud tegevused.<br/>Need tegevused<br/>
-        lahendatakse või tehakse ära tööriistadega, mida nimetatakse (inglise keeles CASE-vahenditeks)<br/>
-        tarkvara raaltehnoloogiaks.<br/>
+
+<header class="hero">
+    <h1>CASE</h1>
+    <p>Computer-Aided Software Engineering</p>
+</header>
+
+<main class="container">
+
+    <section class="card">
+
+        <a class="github-btn" href="../index.html">
+            ← Tagasi
+        </a>
+
+        <br><br>
+
+        <h2>Mis on CASE vahendid?</h2>
+
+        <p>
+            Tarkvaraarenduse elutsükkel koosneb erinevatest etappidest,
+            milles tehtavad tegevused on väga erinevad.
+            CASE-vahendid aitavad tarkvaraarenduse protsesse automatiseerida,
+            dokumenteerida ja organiseerida.
+        </p>
+
+        <br>
+
         <h2>CASE-vahend?</h2>
-        CASE on akronüüm inglisekeelsest terminist "Computer-Aided Software Engineering".
-    </p><br/><br/>
-    <h1>Kuidas CASE-vahendeid kasutatakse?</h1><br/>
-    <p>
-        CASE-vahend on kasutusel erinevates etappides ja lubab ära teha arendajal tegevusi nagu Nõuete analüüs, <br/>
-        erinevate protsesside voolu kujundamine, ajakava seadmine, dokumentatsiooni genereerimine, versiooni<br/>
-        haldus (olgu siis kas dokumentatsioonile endale või arendatavale tarkvarale), arendustöö enda teostamine,<br/>
-        arendusmeeskonna ja arendustöö enda organiseerimine, prototüübi genereerimine jpm.<br/>
-        Sellel eesmärgil kategoriseeritaksegi CASE-vahendid kahte peamisesse kategooriasse.<br/>
+
+        <p>
+            CASE on akronüüm inglisekeelsest terminist
+            <strong>"Computer-Aided Software Engineering"</strong>.
+        </p>
+
+    </section>
+
+    <section class="card">
+
+        <h2>Kuidas CASE-vahendeid kasutatakse?</h2>
+
+        <p>
+            CASE-vahendid võimaldavad:
+        </p>
+
+        <br>
+
         <ul>
-            <li><a href="uppercase.html">Upper-CASE-vahendid</a></li>
-            <li><a href="lowercase.html">Lower-CASE-vahendid</a></li>
-        </ul><br/>
-        CASE-vahendid lubavad teha ära, kas mingi ühe tegevuse, või otsast-otsani arendustööd. Enamus CASE-vahendeid<br/>
-        integreerib endas ka mitme erineva etapi, või mõlema taseme tööriistu.
-    </p><br/><br/>
-    <h1>Näide, Kuidas arendusmudelis Waterfall, CASE-vahendeid rakendada saaks, ning nende tööriistade lühikirjeldus.</h1>
-    <p>
-        <h2>Arendusmudel Waterfall</h2>
-        Waterfall arendusmudel on tarkvaraarenduse mudel, kus töö liigub samm-sammult järjest edasi,<br>
-        nagu vesi voolab allapoole.Iga etapp tehakse lõpuni valmis, enne kui minnakse järgmise juurde. Tagasi liikumine on keeruline.<br>
-        <table border="1" cellpadding="8" cellspacing="0">
+            <li>Nõuete analüüsi</li>
+            <li>Diagrammide loomist</li>
+            <li>Projektijuhtimist</li>
+            <li>Dokumentatsiooni genereerimist</li>
+            <li>Versioonihaldust</li>
+            <li>Testimist</li>
+        </ul>
+
+        <br>
+
+        <div class="links">
+            <a href="uppercase.html">Upper-CASE</a>
+            <a href="lowercase.html">Lower-CASE</a>
+        </div>
+
+    </section>
+
+    <section class="card">
+
+        <h2>Waterfall mudel</h2>
+
+        <p>
+            Waterfall arendusmudel liigub samm-sammult edasi,
+            nagu vesi voolab allapoole.
+        </p>
+
+        <br>
+
+        <table>
+
             <thead>
                 <tr>
-                    <th>Arendusmudeli samm</th>
-                    <th>Sammus tehtavad tööd</th>
-                    <th>Vastav CASE-vahend</th>
-                    <th>CASE-vahendi kirjeldus</th>
+                    <th>Samm</th>
+                    <th>Tööd</th>
+                    <th>CASE</th>
+                    <th>Kirjeldus</th>
                 </tr>
             </thead>
+
             <tbody>
+
                 <tr>
                     <td>Nõuete analüüs</td>
-                    <td>
-                        <ul>
-                            <li>Kliendi nõuete kogumine</li>
-                            <li>Nõuete kirjeldamine</li>
-                        </ul>
-                    </td>
+                    <td>Nõuete kogumine</td>
                     <td>Upper-CASE</td>
-                    <td>Aitab koguda ja dokumenteerida süsteemi nõudeid</td>
+                    <td>Nõuete dokumenteerimine</td>
                 </tr>
+
                 <tr>
                     <td>Süsteemi disain</td>
-                    <td>
-                        <ul>
-                            <li>Süsteemi ülesehituse planeerimine</li>
-                            <li>Diagrammide loomine</li>
-                        </ul>
-                    </td>
+                    <td>Diagrammide loomine</td>
                     <td>Upper-CASE</td>
-                    <td>Võimaldab luua UML- ja protsessidiagramme</td>
+                    <td>UML diagrammid</td>
                 </tr>
+
                 <tr>
                     <td>Arendus</td>
-                    <td>
-                        <ul>
-                            <li>Programmeerimine</li>
-                            <li>Koodi kirjutamine</li>
-                        </ul>
-                    </td>
+                    <td>Koodi kirjutamine</td>
                     <td>Lower-CASE</td>
-                    <td>Toetab tarkvara koodi loomist ja arendamist</td>
+                    <td>Programmeerimine</td>
                 </tr>
+
                 <tr>
                     <td>Testimine</td>
-                    <td>
-                        <ul>
-                            <li>Vigade otsimine</li>
-                            <li>Paranduste kontrollimine</li>
-                        </ul>
-                    </td>
+                    <td>Vigade otsimine</td>
                     <td>Lower-CASE</td>
-                    <td>Aitab leida ja parandada tarkvaravigu</td>
+                    <td>Tarkvara kontroll</td>
                 </tr>
+
                 <tr>
                     <td>Hooldus</td>
-                    <td>
-                        <ul>
-                            <li>Uuenduste tegemine</li>
-                            <li>Vigade parandamine</li>
-                        </ul>
-                    </td>
+                    <td>Parandused</td>
                     <td>Lower-CASE</td>
-                    <td>Hoiab tarkvara töökorras ka pärast valmimist</td>
+                    <td>Süsteemi uuendamine</td>
                 </tr>
+
             </tbody>
-        </table><br><br>
-        <h2>Upper- ja Lower-CASE Waterfall mudelis</h2>
-<ul>
-    <li><strong>Upper-CASE</strong> – kasutatakse arenduse alguses
+
+        </table>
+
+    </section>
+
+    <section class="card">
+
+        <h2>Upper- ja Lower-CASE</h2>
+
         <ul>
-            <li>nõuete analüüs</li>
-            <li>planeerimine</li>
-            <li>diagrammide loomine</li>
+            <li>
+                <strong>Upper-CASE</strong>
+                <ul>
+                    <li>Nõuete analüüs</li>
+                    <li>Planeerimine</li>
+                    <li>Diagrammid</li>
+                </ul>
+            </li>
+
+            <br>
+
+            <li>
+                <strong>Lower-CASE</strong>
+                <ul>
+                    <li>Programmeerimine</li>
+                    <li>Testimine</li>
+                    <li>Hooldus</li>
+                </ul>
+            </li>
         </ul>
-    </li>
-    <li><strong>Lower-CASE</strong> – kasutatakse arenduse hilisemates etappides
-        <ul>
-            <li>programmeerimine</li>
-            <li>testimine</li>
-            <li>hooldus</li>
-        </ul>
-    </li>
-</ul>
-<a href="https://eopearhiiv.edu.ee/e-kursused/eucip/arendus/131_casevahendite_kasutuseesmrgid_ja_klassifikatsioon.html">
-    Allikas (eucip)  
-</p>
+
+        <br>
+
+        <a class="github-btn"
+           href="https://eopearhiiv.edu.ee/e-kursused/eucip/arendus/131_casevahendite_kasutuseesmrgid_ja_klassifikatsioon.html"
+           target="_blank">
+
+            Allikas
+        </a>
+
+    </section>
+
+</main>
+
+<footer class="footer">
+    <p>Sergei Hüvenen ainemapp © 2025</p>
+</footer>
+
 </body>
 </html>

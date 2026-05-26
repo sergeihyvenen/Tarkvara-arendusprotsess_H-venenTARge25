@@ -1,148 +1,125 @@
 <!DOCTYPE html>
 <html lang="et">
 <head>
-    <style>
-        body {
-            font-family: Tahoma, Arial, sans-serif;
-        }
-        table {
-            border-collapse: collapse;
-            width: 100%;
-        }
-        th, td {
-            border: 1px solid black;
-            padding: 8px;
-            vertical-align: top;
-        }
-    </style>
-
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DevOps arendusmudel</title>
+
+    <link rel="stylesheet" href="../style.css">
 </head>
 
 <body>
 
-<a href="./sdlc.html">Tagasi</a>
+<header class="hero small-hero">
+    <h1>DevOps arendusmudel</h1>
+    <p>Pidev arendus, testimine ja automatiseerimine</p>
+</header>
 
-<h1>Mis on DevOps?</h1>
+<main class="container">
 
-<p>
-DevOps on tarkvaraarenduse ja IT-operatsioonide ühendatud tööviis, mille eesmärk on muuta tarkvara arendamine, testimine ja
-väljastamine kiiremaks ning tõhusamaks. DevOps ühendab arendajad (Dev) ja süsteemiadministraatorid (Ops), et nad töötaksid
-koos kogu arendustsükli vältel, mitte eraldi etappides. <br><br>
+    <section class="card">
+                 <a class="github-btn" href="./sdlc.html">
+            ← Tagasi
+        </a>
+        <h2>Mis on DevOps?</h2>
 
-Selle peamine eesmärk on automatiseerida protsesse, vähendada käsitsi tehtavat tööd ning tagada, et tarkvara jõuaks kasutajani
-kiiremini ja väiksema vigade arvuga. DevOps põhineb pideval arendusel, pideval testimisel, pideval väljastamisel ning pideval
-tagasisidel. <br><br>
+        <p>
+            DevOps on tarkvaraarenduse ja IT-operatsioonide ühendatud tööviis, mille eesmärk on muuta
+            arendus, testimine ja väljastamine kiiremaks ning tõhusamaks.
+        </p>
 
-Suurim kasu DevOpsi kasutamisel on see, et tarkvara saab kiiremini valmis, uuendused jõuavad kasutajateni kiiremini ning
-probleeme saab lahendada juba varajases faasis.
-</p>
+        <p>
+            DevOps põhineb pideval integratsioonil, testimisel ja tagasisidel, et tarkvara jõuaks kasutajateni
+            kiiremini ja stabiilsemalt.
+        </p>
+    </section>
 
-<br/>
+    <section class="card">
+        <h2>DevOps arendustsükkel</h2>
 
-<h2>DevOps arendustsükli etapid</h2>
+        <ol class="styled-list">
+            <li><b>Planeerimine</b> – eesmärkide ja nõuete määramine</li>
+            <li><b>Arendus</b> – koodi kirjutamine ja versioonihaldus</li>
+            <li><b>Ehitus</b> – rakenduse kompileerimine</li>
+            <li><b>Testimine</b> – vigade ja probleemide leidmine</li>
+            <li><b>Väljastamine</b> – tarkvara tootmisse viimine</li>
+            <li><b>Haldamine</b> – süsteemi töö jälgimine</li>
+            <li><b>Jälgimine</b> – tagasiside ja analüüs</li>
+        </ol>
+    </section>
 
-<ol>
-    <li>
-        <b>Planeerimine (Plan)</b> – selles etapis määratakse projekti eesmärgid, nõuded ja tööülesanded. Meeskond analüüsib,
-        millist probleemi tarkvara lahendab ja milline peab olema lõpptulemus. Samuti jagatakse töö sprintideks ning pannakse paika
-        prioriteedid. Hea planeerimine aitab vältida hilisemaid suuri muudatusi.
-    </li><br>
+    <section class="card">
+        <h2>DevOps tsükli joonis</h2>
 
-    <li>
-        <b>Arendus (Code)</b> – arendajad kirjutavad koodi vastavalt planeeritud nõuetele. Kasutatakse versioonihaldust (nt Git),
-        et jälgida muudatusi ja töötada meeskonnana sama projekti kallal. Kood peab olema puhas, loetav ja hooldatav.
-    </li><br>
+        <img src="../pildid/devops.webp"
+             alt="DevOps tsükkel"
+             style="width:100%; height:auto; border-radius:12px;">
+    </section>
 
-    <li>
-        <b>Ehitus (Build)</b> – selles faasis kompileeritakse kood ja luuakse töötav rakenduse versioon. Süsteem kontrollib,
-        kas kood on tehniliselt korrektne ja kas kõik sõltuvused töötavad. Kui siin tekivad vead, parandatakse need enne testimist.
-    </li><br>
+    <section class="card">
+        <h2>Tähtsaim omadus</h2>
 
-    <li>
-        <b>Testimine (Test)</b> – tarkvara kontrollitakse vigade, turvaprobleemide ja jõudluse osas. Kasutatakse automaatseid teste,
-        et leida probleemid kiiresti. Eesmärk on tagada, et tarkvara töötab ootuspäraselt enne väljalaset.
-    </li><br>
+        <p>
+            DevOpsi kõige tähtsam omadus on pidev automatiseerimine ja tagasiside, mis hoiab kogu süsteemi
+            pidevas arengutsüklis.
+        </p>
 
-    <li>
-        <b>Väljastamine (Release & Deploy)</b> – kui testid on edukad, viiakse tarkvara tootmiskeskkonda. See võib toimuda
-        automaatselt või käsitsi. Selles etapis tehakse tarkvara kättesaadavaks kasutajatele.
-    </li><br>
+        <ul>
+            <li>vead leitakse kiiremini</li>
+            <li>arendus on stabiilsem</li>
+            <li>meeskonnad töötavad koos</li>
+            <li>väljalasked on kiirem</li>
+        </ul>
+    </section>
 
-    <li>
-        <b>Haldamine (Operate)</b> – pärast väljalaset jälgitakse süsteemi tööd reaalajas. Tagatakse, et serverid töötavad,
-        süsteem on stabiilne ning kasutajad saavad probleemideta teenust kasutada.
-    </li><br>
+    <section class="card">
+        <h2>Head ja vead</h2>
 
-    <li>
-        <b>Jälgimine ja tagasiside (Monitor)</b> – kogutakse andmeid süsteemi töö kohta ning analüüsitakse kasutajate käitumist.
-        See info saadetakse tagasi planeerimisfaasi, et teha järgmisi parandusi ja uuendusi.
-    </li>
-</ol>
+        <div class="table-wrapper">
+            <table>
+                <tr>
+                    <th>Head</th>
+                    <th>Vead</th>
+                </tr>
+                <tr>
+                    <td>
+                        <ul>
+                            <li>Kiirem väljastamine</li>
+                            <li>Pidev testimine</li>
+                            <li>Hea koostöö</li>
+                            <li>Vähem käsitsi vigu</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>Keeruline algseadistus</li>
+                            <li>Palju tööriistu</li>
+                            <li>Sõltub automaatikast</li>
+                            <li>Nõuab kogemust</li>
+                        </ul>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </section>
 
-<br/>
+    <section class="card">
+        <h2>Allikad</h2>
 
-<h2>DevOps tsükli joonis</h2>
+        <div class="links">
+            <a href="https://www.geeksforgeeks.org/devops/devops-lifecycle/" target="_blank">
+                GeeksforGeeks – DevOps Lifecycle
+            </a>
+        </div>
+    </section>
 
- <img src="../pildid/devops.webp" alt="">
 
-<br/>
 
-<h2>DevOps kõige tähtsam omadus</h2>
+</main>
 
-<p>
-DevOpsi kõige tähtsam omadus on <b>pidev automatiseerimine ja tagasiside</b>. See tähendab, et kõik etapid on omavahel ühendatud
-ja töötavad pidevalt tsüklina.
-</p>
-
-<p>
-See on oluline, sest:
-</p>
-
-<ul>
-    <li>vead leitakse kiiremini</li>
-    <li>arendus on kiirem ja stabiilsem</li>
-    <li>meeskonnad töötavad paremini koos</li>
-    <li>tarkvara jõuab kiiremini kasutajateni</li>
-</ul>
-
-<br/>
-
-<h2>DevOps head ja vead</h2>
-
-<table>
-    <tr>
-        <th>Head</th>
-        <th>Vead</th>
-    </tr>
-    <tr>
-        <td>
-            <ul>
-                <li>Kiirem tarkvara väljastamine</li>
-                <li>Pidev automaatne testimine</li>
-                <li>Hea koostöö Dev ja Ops vahel</li>
-                <li>Vähem käsitsi vigu</li>
-            </ul>
-        </td>
-        <td>
-            <ul>
-                <li>Alguses keeruline seadistada</li>
-                <li>Nõuab palju tööriistu</li>
-                <li>Sõltub automaatikast</li>
-                <li>Vajab kogenud meeskonda</li>
-            </ul>
-        </td>
-    </tr>
-</table>
-
-<br/>
-
-<h2>Allikad</h2>
-
-<ul>
-<li><a href="https://www.geeksforgeeks.org/devops/devops-lifecycle/">GeeksforGeeks - DevOps</a></li>
-</ul>
+<footer class="footer">
+    <p>Sergei Hüvenen ainemapp © 2025</p>
+</footer>
 
 </body>
 </html>

@@ -1,62 +1,84 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="et">
 <head>
-    <style>
-        body {
-            font-family: Tahoma, Arial, sans-serif;
-        }
-      </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spiraalmudel</title>
-</head>
-<body>
-    <a href="../index.html">Tagasi</a>
-    <h1>Spiraal arendusmudel</h1><br/>
-    <p>
-    Spiraalmudel on tarkvaraarenduse elutsükli mudel, mille keskmes on riskide hindamine ja arendus, mis<br/>
-    toimub ringidena ehk spiraali kujuliselt. Iga ring ehk tsükkel koosneb tulemuse hindamisest, planerimisest<br/>
-    riskide analüüsist ja prototüübi loomisest. Spiraalmuudelis saab vajadusel alati tagasi minna varasematesse sammudesse,<br/>
-    mis teeb selle painlikumaks kui lineaarsed mudelid, nahu kosemudel.<br/>
-    </p><br/><br/>
-<h2>Mis on spiraalmudeli etapid?</h2>
-<p>
- Spiraalmudelis on neli põhietappi, mida korratakse igas tsüklis üha täpsemal ja detailsemal<br/>
- tasemel. Iga ringi jooksul täidetakse järgmised sammud: Eesmärkide seadmine, riskide hindamine,<br/>
- arendus ja testimine ning järgmise tsükli planeerimine.<br/>   
-</p><br/><br/>
-<h3>1. Etapp - Eesmärkide seadmine</h3>
-<p>
-    Selles sammus pannakse paika, mida soovitakse antud arendustsüklis saavutada.<br/>
-    Täpsustatakse nii funktsionaalsed ku ka mittefunktsionaalsed nõuded ning lepitakse kokku,<br/>
-    millist osa süsteemist hakatakse arendama. Kuna spiraalmudel on iteratiivne, ei pea<br/>
-    kogu süsteemi nõuded alguses täilikult valmis olema.<br/>
-</p><br/><br/>
-<h3>2. Etapp - Riskide analüüs</h3>
-<p>
-    See on kõige tähtsam ja iseloomulikum etapp. Siin hinnatakse võimalikke probleeme,<br/>
-    mis võivad takistada projekti õnnestumist, näiteks tehnoloogilsed riskid, teadmiste<br/>
-    puudumine või ajariskid. Sageli tehakse sel etappil väike prototüüp, et kontrollida,<br/>
-    kas planeeritav lahendus on realistik ja toimib.<br/>
-</p><br/><br/>
-<h3>3. Etapp - Arendus ja testimine</h3>
-<p>
-    Peale riskide hindamist arendatakse välja see osa süsteemist, mis vastavas tsüklis<br/>
-    plaanitud sai. Arendus võib olla kas lihtne prototüüp või juba funktsionaalne moodul.<br/>
-    Valminud osa testitakse, et veenduda selle töökorras toimimises ja vastavuses seatud<br/>
-    eesmärkidele. Testimise põhjal otsustatakse, mida tuleb muuta või täiustada.<br/>
-</p><br><br>
-<h3>4. Etapp - Järgmise tsükli planeerimine</h3>
-<p>
-    Kui tsükli töö on läbi, hinnatakse tulemusi ja otsustatakse, kuidas projektiga edasi minna.<br/>
-    Koostatakse järgmise arendusringi plaan: mida täpsustada, mida juurde arendada ja milliseid<br/>
-    riske järgmises etapis käsitleda. Seejärel algab uus “ring” spiraalis.<br/>
 
-</p><br><br>
-<h2>Arendusmudeli joonis:</h2>
-<img src="../pildid/image4.4.png"/>
-<br/><br/>
-Viited infole:
-    <a href="https://eopearhiiv.edu.ee/e-kursused/eucip/arendus/1223_spiraalmudel.html">E-õpearhiiv</a> 
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+<header class="hero small-hero">
+    <h1>Spiraalmudel</h1>
+    <p>Tarkvaraarenduse elutsükli iteratiivne riskipõhine mudel</p>
+</header>
+
+<main class="container">
+
+    <section class="card">
+        <a class="github-btn" href="./sdlc.html">
+            ← Tagasi
+        </a>
+        <h2>Mis on spiraalmudel?</h2>
+
+        <p>
+            Spiraalmudel on tarkvaraarenduse mudel, mis põhineb korduvatel tsüklitel (spiraalidel)
+            ning keskendub eelkõige riskide analüüsile.
+        </p>
+
+        <p>
+            Iga tsükkel parandab ja täiustab süsteemi järk-järgult.
+        </p>
+    </section>
+
+    <section class="card">
+        <h2>Spiraalmudeli etapid</h2>
+
+        <ul class="styled-list">
+            <li><b>Eesmärkide seadmine</b> – määratakse, mida selles tsüklis arendatakse</li>
+            <li><b>Riskide analüüs</b> – hinnatakse tehnilisi ja projektiriske</li>
+            <li><b>Arendus ja testimine</b> – luuakse ja kontrollitakse lahendust</li>
+            <li><b>Planeerimine</b> – valmistatakse ette järgmine iteratsioon</li>
+        </ul>
+    </section>
+
+    <section class="card">
+        <h2>Etappide selgitus</h2>
+
+        <p>
+            Spiraalmudeli iga tsükkel on korduv protsess, kus süsteemi arendatakse samm-sammult.
+        </p>
+
+        <p>
+            Erinevalt lineaarsetest mudelitest (nt Waterfall) keskendub spiraalmudel riskide vähendamisele.
+        </p>
+    </section>
+
+    <section class="card">
+        <h2>Arendusmudeli joonis</h2>
+
+        <img src="../pildid/image4.4.png" alt="Spiraalmudel joonis" style="max-width:100%; border-radius:12px;">
+    </section>
+
+    <section class="card">
+        <h2>Viited</h2>
+
+        <div class="links">
+            <a href="https://eopearhiiv.edu.ee/e-kursused/eucip/arendus/1223_spiraalmudel.html" target="_blank">
+                E-õppematerjal (Spiraalmudel)
+            </a>
+        </div>
+    </section>
+
+
+
+</main>
+
+<footer class="footer">
+    <p>Sergei Hüvenen ainemapp © 2025</p>
+</footer>
+
 </body>
 </html>

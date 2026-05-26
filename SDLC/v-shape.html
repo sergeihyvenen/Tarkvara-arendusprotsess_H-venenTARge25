@@ -1,153 +1,124 @@
 <!DOCTYPE html>
 <html lang="et">
 <head>
-    <style>
-        body {
-            font-family: Tahoma, Arial, sans-serif;
-        }
-        table {
-            border-collapse: collapse;
-            width: 100%;
-        }
-        th, td {
-            border: 1px solid black;
-            padding: 8px;
-            vertical-align: top;
-        }
-    </style>
-
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>V-Model SDLC</title>
+
+    <link rel="stylesheet" href="../style.css">
 </head>
 
 <body>
 
-<a href="./sdlc.html">Tagasi</a>
+<header class="hero small-hero">
+    <h1>V-Model</h1>
+    <p>Verification & Validation mudel tarkvaraarenduses</p>
+</header>
 
-<h1>Mis on V-Model?</h1>
+<main class="container">
 
-<p>
-V-Model (Verification and Validation Model) on tarkvaraarenduse elutsükli (SDLC) mudel, mis põhineb ideel, et iga arendusfaasi
-kõrval on olemas vastav testimisfaas. Mudel on kujutatud V-tähe kujuliselt, kus vasak pool tähistab arendust ja parem pool testimist.
-</p>
+    <section class="card">
+    
+        <a class="github-btn" href="./sdlc.html">
+            ← Tagasi
+        </a>
+        <h2>Mis on V-Model?</h2>
 
-<p>
-V-Model on lineaarne ja struktureeritud mudel, mis tähendab, et iga etapp tuleb lõpetada enne järgmise algust. Selle peamine eesmärk
-on tagada, et vigu leitakse varakult ning iga arendusetapp on otseselt seotud testimisega.
-</p>
+        <p>
+            V-Model (Verification and Validation Model) on SDLC mudel, kus iga arendusetapi kõrval
+            on vastav testimisetapp.
+        </p>
 
-<p>
-Suurim kasu on see, et kvaliteet paraneb juba arenduse käigus, sest testimine ei toimu ainult lõpus, vaid igal tasandil paralleelselt.
-</p>
+        <p>
+            Mudel on V-kujuline: vasak pool = arendus, parem pool = testimine.
+        </p>
+    </section>
 
-<br/>
+    <section class="card">
+        <h2>V-Model etapid</h2>
 
-<h2>V-Model etapid</h2>
+        <ol class="styled-list">
+            <li><b>Nõuete analüüs</b> – kliendi vajaduste määramine</li>
+            <li><b>Süsteemi disain</b> – üldine arhitektuur</li>
+            <li><b>High-Level disain</b> – moodulite jaotus</li>
+            <li><b>Low-Level disain</b> – detailne süsteemi loogika</li>
+            <li><b>Programmeerimine</b> – koodi kirjutamine</li>
+            <li><b>Üksustestimine</b> – üksikute komponentide test</li>
+            <li><b>Integratsioonitest</b> – moodulite koos töötamine</li>
+            <li><b>Süsteemitest</b> – kogu süsteemi test</li>
+            <li><b>UAT</b> – kasutaja aktsepteerimistest</li>
+        </ol>
+    </section>
 
-<ol>
-    <li>
-        <b>Nõuete analüüs (Requirement Analysis)</b> – selles etapis kogutakse kliendi vajadused ja määratakse süsteemi eesmärgid.
-        Kõik nõuded dokumenteeritakse ning analüüsitakse, et vältida arusaamatusi hiljem. See on kogu projekti alus.
-    </li><br>
+    <section class="card">
+        <h2>Joonis</h2>
 
-    <li>
-        <b>Süsteemi disain (System Design)</b> – siin planeeritakse kogu süsteemi arhitektuur. Määratakse, kuidas erinevad osad
-        omavahel suhtlevad ning milline on süsteemi üldine struktuur.
-    </li><br>
+        <img src="../pildid/v-shape.webp" alt="V-Model diagramm"
+             style="max-width:100%; border-radius:12px;">
+    </section>
 
-    <li>
-        <b>Arhitektuurne disain (High Level Design)</b> – süsteem jaotatakse suuremateks mooduliteks ning määratakse nende
-        funktsioonid. See aitab mõista, kuidas süsteem tervikuna töötab.
-    </li><br>
+    <section class="card">
+        <h2>Tähtsaim omadus</h2>
 
-    <li>
-        <b>Detailne disain (Low Level Design)</b> – iga moodul disainitakse täpsemalt. Siin määratakse andmestruktuurid,
-        algoritmid ja täpsed funktsioonid.
-    </li><br>
+        <p>
+            V-Modeli kõige tähtsam omadus on varajane vigade tuvastamine läbi testimise.
+        </p>
 
-    <li>
-        <b>Programmeerimine (Coding)</b> – arendajad kirjutavad koodi vastavalt disainile. See on V-mudeli alumine punkt,
-        kust algab tõus testimise suunas.
-    </li><br>
+        <ul>
+            <li>Iga etapp on seotud testimisega</li>
+            <li>Vead leitakse varakult</li>
+            <li>Parandamine on odavam</li>
+            <li>Struktureeritud protsess</li>
+        </ul>
+    </section>
 
-    <li>
-        <b>Üksustestimine (Unit Testing)</b> – testitakse iga koodiosa eraldi, et veenduda nende korrektses töös.
-    </li><br>
+    <section class="card">
+        <h2>Head ja vead</h2>
 
-    <li>
-        <b>Integratsioonitestimine (Integration Testing)</b> – kontrollitakse, kuidas erinevad moodulid koos töötavad.
-    </li><br>
+        <div class="table-wrapper">
+            <table>
+                <tr>
+                    <th>Head</th>
+                    <th>Vead</th>
+                </tr>
+                <tr>
+                    <td>
+                        <ul>
+                            <li>Selge struktuur</li>
+                            <li>Varajane testimine</li>
+                            <li>Hea dokumentatsioon</li>
+                            <li>Lihtne hallata</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>Vähe paindlikkust</li>
+                            <li>Raske muudatusi teha</li>
+                            <li>Ei sobi keerulistele projektidele</li>
+                            <li>Pikk algplaneerimine</li>
+                        </ul>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </section>
 
-    <li>
-        <b>Süsteemitestimine (System Testing)</b> – testitakse kogu süsteemi tervikuna, et veenduda, et see vastab nõuetele.
-    </li><br>
+    <section class="card">
+        <h2>Allikad</h2>
 
-    <li>
-        <b>Kasutaja aktsepteerimistest (User Acceptance Testing)</b> – lõppkasutajad kontrollivad, kas süsteem vastab nende ootustele.
-    </li>
-</ol>
+        <div class="links">
+            <a href="https://www.geeksforgeeks.org/software-engineering/software-engineering-sdlc-v-model/" target="_blank">
+                GeeksforGeeks - V-Model
+            </a>
+        </div>
+    </section>
 
-<br/>
 
-<h2>V-Model joonis</h2>
+</main>
 
- <img src="../pildid/v-shape.webp" alt="">
-
-<br/>
-
-<h2>V-Model kõige tähtsam omadus</h2>
-
-<p>
-V-Modeli kõige tähtsam omadus on <b>varajane vigade avastamine läbi paralleelse testimise</b>.
-</p>
-
-<p>
-See on oluline, sest:
-</p>
-
-<ul>
-    <li>iga arendusetapp on seotud testimisega</li>
-    <li>vead leitakse varakult, mitte lõpus</li>
-    <li>arendus on struktureeritud ja kontrollitud</li>
-    <li>parandused on odavamad ja lihtsamad</li>
-</ul>
-
-<br/>
-
-<h2>V-Model head ja vead</h2>
-
-<table>
-    <tr>
-        <th>Head</th>
-        <th>Vead</th>
-    </tr>
-    <tr>
-        <td>
-            <ul>
-                <li>Vigade varajane tuvastamine</li>
-                <li>Selge struktuur</li>
-                <li>Lihtne hallata</li>
-                <li>Hea dokumentatsioon</li>
-            </ul>
-        </td>
-        <td>
-            <ul>
-                <li>Vähe paindlikkust</li>
-                <li>Raske muudatusi teha</li>
-                <li>Ei sobi keerulistele projektidele</li>
-                <li>Pikk planeerimisfaas</li>
-            </ul>
-        </td>
-    </tr>
-</table>
-
-<br/>
-
-<h2>Allikad</h2>
-
-<ul>
-<li><a href="https://www.geeksforgeeks.org/software-engineering/software-engineering-sdlc-v-model/">GeeksforGeeks - V-Shape</a></li>
-</ul>
+<footer class="footer">
+    <p>Sergei Hüvenen ainemapp © 2025</p>
+</footer>
 
 </body>
 </html>

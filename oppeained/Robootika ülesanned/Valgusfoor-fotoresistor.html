@@ -1,34 +1,39 @@
 <!DOCTYPE html>
 <html lang="et">
 <head>
-    <style>
-.code-window {
-  background: #1e1e1e;
-  color: #d4d4d4;
-  padding: 12px;
-  border-radius: 8px;
-  font-family: monospace;
 
-  width: 700px;
-  max-height: 600px;
-  overflow: auto;
-
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-}
-        body {
-            font-family: Tahoma, Arial, sans-serif;
-        }
-      </style>
     <meta charset="UTF-8">
-    <title>Valgusfoor</title>
+
+    <title>Valgusfoor fotoresistor</title>
+
+    <link rel="stylesheet" href="/style.css">
+
+
 </head>
 <body>
-<a href="/oppeained/Robootika.html">Tagasi</a>
-<h1>Valgusfoor-fotoresistoriga ülesanne</h1>
+<header class="hero">
 
-<h2>Kood</h2>
+    <h1>Valgusfoor fotoresistor</h1>
 
-<div class="code-window">
+    <p>
+        Arduino valgusfoori fotoresistoriga ülesanne
+    </p>
+
+</header>
+
+<main class="container">
+
+    <section class="card">
+
+        <a class="github-btn" href="/oppeained/Robootika.html">
+            ← Tagasi
+        </a>
+
+        <br><br>
+
+        <h2>Kood</h2>
+
+        <div class="code-window">
   <pre><code>
 const int autopunane = 13;
 const int autokollane = 12;
@@ -145,8 +150,30 @@ void loop()
   </code></pre>
 </div>
 
-<h2>Video</h2>
-<p>https://youtu.be/SZ8g-KG5DrY</p>
+</section>
 
+<section class="card">
+
+        <h2>Video</h2>
+
+        <p>
+            Valgusfoori demonstratsioon video kujul.
+        </p>
+
+        <div class="video-wrapper">
+
+            <iframe
+                src="https://www.youtube.com/embed/SZ8g-KG5DrY?rel=0"
+                title="YouTube video player"
+                allowfullscreen>
+            </iframe>
+
+        </div>
+
+    </section>
+</main>
+<footer class="footer">
+    <p>Sergei Hüvenen ainemapp © 2025</p>
+</footer>
 </body>
 </html>

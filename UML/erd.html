@@ -1,60 +1,101 @@
 <!DOCTYPE html>
 <html lang="et">
 <head>
-    <style>
-        body {
-            font-family: Tahoma, Arial, sans-serif;
-        }
-      </style>
     <meta charset="UTF-8">
-    <title>ERD</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ERD - UML</title>
+
+    <link rel="stylesheet" href="../style.css">
 </head>
+
 <body>
-<a href="../UML/index.html">Tagasi</a>
-<h1>ERD (Entity Relationship Diagram)</h1>
 
-<p>
-    ERD diagramm on visuaalne andmemudeli skeem, mis kirjeldab olemid (tabeleid),<br>
-    nende atribuute ja omavahelisi seoseid. ERD-id aitavad planeerida relatsioonandmebaasi<br>
-    struktuuri juba enne andmebaasi loomist.<br>
-</p>
+<header class="hero small-hero">
+    <h1>ERD (Entity Relationship Diagram)</h1>
+    <p>Andmemudelite ja andmebaaside visualiseerimine</p>
+</header>
 
-<h2>Kus kasutatakse?</h2>
-<ul>
-    <li>Andmebaaside planeerimisel</li>
-    <li>Süsteemide andmemudelite loomisel</li>
-</ul>
+<main class="container">
 
-<h2>Ühenduselemendid</h2>
-<ul>
-    <li><strong>1 : 1</strong> – üks ühele</li>
-    <li><strong>1 : N</strong> – üks mitmele</li>
-    <li><strong>M : N</strong> – mitu mitmele</li>
-</ul>
+    <section class="card">
+        <a class="github-btn" href="./index.html">
+            ← Tagasi
+        </a>
+        <h2>Mis on ERD?</h2>
 
-<h2>Olemitabel</h2>
-<ul>
-    <li>Olemi nimi</li>
-    <li>Atribuudid</li>
-    <li>Võtmed</li>
-</ul>
+        <p>
+            ERD (Entity Relationship Diagram) on diagramm, mis kirjeldab andmebaasi struktuuri:
+            olemeid, atribuute ja nendevahelisi seoseid.
+        </p>
 
-<h2>Võtmed</h2>
-<ul>
-    <li><strong>Primary Key</strong> – unikaalne identifikaator</li>
-    <li><strong>Foreign Key</strong> – viide teise tabeli Primary Keyle</li>
-    <li><strong>Composite Key</strong> – mitmest väljast koosnev võti</li>
-    <li><strong>Key</strong> – üldine identifikaator</li>
-</ul>
+        <p>
+            Seda kasutatakse andmebaasi planeerimiseks enne selle loomist.
+        </p>
+    </section>
 
-<h2>ERD näidis</h2>
-<img src="../pildid/erd-example.png" width="700">
+    <section class="card">
+        <h2>Kus kasutatakse?</h2>
 
-<h2>Viited</h2>
-<ul>
-    <a href="https://www.lucidchart.com/pages/er-diagrams">
-        Lucidchart 
-</ul>
+        <ul class="styled-list">
+            <li>Andmebaaside planeerimisel</li>
+            <li>Süsteemide andmemudelite loomisel</li>
+            <li>Infosüsteemide analüüsis</li>
+        </ul>
+    </section>
+
+    <section class="card">
+        <h2>Seosed ERD-s</h2>
+
+        <ul class="styled-list">
+            <li><b>1 : 1</b> – üks ühele seos</li>
+            <li><b>1 : N</b> – üks mitmele seos</li>
+            <li><b>M : N</b> – mitu mitmele seos</li>
+        </ul>
+    </section>
+
+    <section class="card">
+        <h2>Andmebaasi elemendid</h2>
+
+        <ul class="styled-list">
+            <li>Olem (Entity)</li>
+            <li>Atribuudid</li>
+            <li>Võtmed</li>
+        </ul>
+    </section>
+
+    <section class="card">
+        <h2>Võtmed</h2>
+
+        <ul class="styled-list">
+            <li><b>Primary Key</b> – unikaalne identifikaator</li>
+            <li><b>Foreign Key</b> – viide teisele tabelile</li>
+            <li><b>Composite Key</b> – mitme välja kombinatsioon</li>
+        </ul>
+    </section>
+
+    <section class="card">
+        <h2>ERD näidis</h2>
+
+        <img src="../pildid/erd-example.png" alt="ERD diagramm"
+             style="max-width:100%; border-radius:12px;">
+    </section>
+
+    <section class="card">
+        <h2>Viited</h2>
+
+        <div class="links">
+            <a href="https://www.lucidchart.com/pages/er-diagrams" target="_blank">
+                Lucidchart – ERD
+            </a>
+        </div>
+    </section>
+
+
+</main>
+
+<footer class="footer">
+    <p>Sergei Hüvenen ainemapp © 2025</p>
+</footer>
 
 </body>
 </html>
