@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <style>
+.code-window {
+  background: #1e1e1e;
+  color: #d4d4d4;
+  padding: 12px;
+  border-radius: 8px;
+  font-family: monospace;
+
+  width: 700px;
+  max-height: 600px;
+  overflow: auto;
+
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+        body {
+            font-family: Tahoma, Arial, sans-serif;
+        }
+      </style>
+    <meta charset="UTF-8">
+    <title>Valgusfoor</title>
+</head>
+<body>
+<a href="/oppeained/Robootika.html">Tagasi</a>
+<h1>Valgusfoor-fotoresistoriga ülesanne</h1>
+
+<h2>Kood</h2>
+
+<div class="code-window">
+  <pre><code>
+const int autopunane = 13;
+const int autokollane = 12;
+const int autoroheline = 11;
+
+const int jalapunane = 6;
+const int jalaroheline = 5;
+
+const int sensorPin = A0;
+
+int lightLevel;
+const int threshold = 100;
+
+void setup()
+{
+  pinMode(autopunane, OUTPUT);
+  pinMode(autokollane, OUTPUT);
+  pinMode(autoroheline, OUTPUT);
+
+  pinMode(jalapunane, OUTPUT);
+  pinMode(jalaroheline, OUTPUT);
+
+  Serial.begin(9600);
+}
+
+void day()
+{
+  // Day mode
+
+  digitalWrite(jalapunane, HIGH);
+  digitalWrite(autokollane, LOW);
+  digitalWrite(autopunane, HIGH);
+
+  delay(1000);
+
+  digitalWrite(jalapunane, LOW);
+  digitalWrite(jalaroheline, HIGH);
+
+  delay(3000);
+
+  for (int i = 0; i <= 3; i++)
+  {
+    digitalWrite(jalaroheline, LOW);
+    delay(500);
+
+    digitalWrite(jalaroheline, HIGH);
+    delay(500);
+  }
+
+  digitalWrite(jalaroheline, LOW);
+  digitalWrite(jalapunane, HIGH);
+
+  delay(1000);
+
+  digitalWrite(autokollane, HIGH);
+
+  delay(1000);
+
+  digitalWrite(autopunane, LOW);
+  digitalWrite(autokollane, LOW);
+  digitalWrite(autoroheline, HIGH);
+
+  delay(3000);
+
+  for (int i = 0; i <= 3; i++)
+  {
+    digitalWrite(autoroheline, LOW);
+    delay(500);
+
+    digitalWrite(autoroheline, HIGH);
+    delay(500);
+  }
+
+  digitalWrite(autoroheline, LOW);
+  digitalWrite(autokollane, HIGH);
+
+  delay(1000);
+}
+
+void night()
+{
+  // Night mode
+
+  digitalWrite(autopunane, LOW);
+  digitalWrite(autoroheline, LOW);
+
+  digitalWrite(jalapunane, LOW);
+  digitalWrite(jalaroheline, LOW);
+
+  digitalWrite(autokollane, LOW);
+  delay(500);
+
+  digitalWrite(autokollane, HIGH);
+  delay(500);
+}
+
+void loop()
+{
+  lightLevel = analogRead(sensorPin);
+
+  Serial.print("Light level: ");
+  Serial.println(lightLevel);
+
+  if (lightLevel > threshold)
+  {
+    night();
+  }
+  else
+  {
+    day();
+  }
+}
+
+  </code></pre>
+</div>
+
+<h2>Video</h2>
+<p>https://youtu.be/SZ8g-KG5DrY</p>
+
+</body>
+</html>
