@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ilmajaam</title>
+
+    <link rel="stylesheet" href="../../style.css">
+
+
+</head>
+<body>
+<header class="hero">
+
+    <h1>Ilmajaam</h1>
+
+    <p>
+        Arduino ilmajaam ülesanne
+    </p>
+
+</header>
+
+<main class="container">
+
+    <section class="card">
+
+        <a class="github-btn" href="../Robootika.html">
+            ← Tagasi
+        </a>
+
+        <br><br>
+
+        <h2>Kood</h2>
+
+        <div class="code-window">
+  <pre><code>
+#include < LiquidCrystal.h >
+
+LiquidCrystal lcd(12, 11, 5, 4, 3, 2);
+
+const int tempPin = A1;
+const int lightPin = A0;
+
+unsigned long previousMillis = 0;
+const long interval = 5000;
+
+int screenIndex = 0;
+
+String stationName = "SkyWatch";
+
+const char* ilmTekstid[] = {
+  "Paike paistab!",
+  "Vihm tulekul",
+  "Tana on jahe",
+  "Soe ja monus",
+  "Pime ohtu",
+  "Naudi ilma!"
+};
+
+byte sun[8] = {
+  0b00100,
+  0b10101,
+  0b01110,
+  0b11111,
+  0b01110,
+  0b10101,
+  0b00100,
+  0b00000
+};
+
+byte cloud[8] = {
+  0b00000,
+  0b00110,
+  0b01111,
+  0b11111,
+  0b11111,
+  0b01110,
+  0b00000,
+  0b00000
+};
+
+byte rain[8] = {
+  0b00110,
+  0b01111,
+  0b11111,
+  0b11111,
+  0b00100,
+  0b01010,
+  0b00100,
+  0b00000
+};
+
+byte snow[8] = {
+  0b00100,
+  0b10101,
+  0b01110,
+  0b11111,
+  0b01110,
+  0b10101,
+  0b00100,
+  0b00000
+};
+
+byte heart[8] = {
+  0b00000,
+  0b01010,
+  0b11111,
+  0b11111,
+  0b11111,
+  0b01110,
+  0b00100,
+  0b00000
+};
+
+void setup()
+{
+  Serial.begin(9600);
+
+  lcd.begin(16, 2);
+
+  lcd.createChar(0, sun);
+  lcd.createChar(1, cloud);
+  lcd.createChar(2, rain);
+  lcd.createChar(3, snow);
+  lcd.createChar(4, heart);
+
+  lcd.setCursor(0, 0);
+  lcd.print(stationName);
+
+  lcd.setCursor(0, 1);
+  lcd.print("Loading...");
+
+  delay(2000);
+
+  lcd.clear();
+}
+
+void loop()
+{
+  unsigned long currentMillis = millis();
+
+  int tempValue = analogRead(tempPin);
+
+  float voltage = tempValue * (5.0 / 1023.0);
+
+  float temperatureC = (voltage - 0.5) * 100;
+
+  int lightValue = analogRead(lightPin);
+
+  Serial.print("Temp: ");
+  Serial.println(temperatureC);
+
+  Serial.print("Light: ");
+  Serial.println(lightValue);
+
+  if (currentMillis - previousMillis >= interval)
+  {
+    previousMillis = currentMillis;
+
+    lcd.clear();
+
+    if (screenIndex == 0)
+    {
+      lcd.setCursor(0, 0);
+
+      lcd.print("Temp:");
+      lcd.print(temperatureC);
+      lcd.print((char)223);
+      lcd.print("C");
+
+      lcd.setCursor(0, 1);
+
+      if (temperatureC < 10)
+      {
+        lcd.print("Cold ");
+        lcd.write(byte(3));
+      }
+      else if (temperatureC > 25)
+      {
+        lcd.print("Warm ");
+        lcd.write(byte(0));
+      }
+      else
+      {
+        lcd.print("Comfort ");
+        lcd.write(byte(4));
+      }
+    }
+
+    else if (screenIndex == 1)
+    {
+      lcd.setCursor(0, 0);
+
+      lcd.print("Light:");
+      lcd.print(lightValue);
+
+      lcd.setCursor(0, 1);
+
+      if (lightValue < 300)
+      {
+        lcd.print("Dark ");
+        lcd.write(byte(1));
+      }
+      else
+      {
+        lcd.print("Bright ");
+        lcd.write(byte(0));
+      }
+    }
+
+    else if (screenIndex == 2)
+    {
+      lcd.setCursor(0, 0);
+
+      lcd.print("SkyWatch");
+
+      lcd.setCursor(0, 1);
+
+      lcd.print("Enjoy weather");
+    }
+
+    screenIndex++;
+
+    if (screenIndex > 2)
+    {
+      screenIndex = 0;
+    }
+  }
+}
+
+  </code></pre>
+</div>
+
+</section>
+
+<section class="card">
+
+        <h2>Video</h2>
+
+        <p>
+            Ilmajaami demonstratsioon video kujul.
+        </p>
+
+        <div class="video-wrapper">
+
+            <iframe
+                src="https://www.youtube.com/embed/jBghfyedGH4?rel=0"
+                title="YouTube video player"
+                allowfullscreen>
+            </iframe>
+
+        </div>
+
+    </section>
+</main>
+<footer class="footer">
+    <p>Sergei Hüvenen ainemapp © 2025</p>
+</footer>
+</body>
+</html>
