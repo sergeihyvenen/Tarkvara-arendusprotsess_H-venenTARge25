@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Väike alarm system</title>
+
+    <link rel="stylesheet" href="../../style.css">
+
+
+</head>
+<body>
+<header class="hero">
+
+    <h1>Väike alarm system</h1>
+
+    <p>
+        Arduino buzzer ülesanne
+    </p>
+
+</header>
+
+<main class="container">
+
+    <section class="card">
+
+        <a class="github-btn" href="../Robootika.html">
+            ← Tagasi
+        </a>
+
+        <br><br>
+
+        <h2>Kood</h2>
+
+        <div class="code-window">
+  <pre><code>
+#include <LiquidCrystal.h>
+
+LiquidCrystal lcd(12, 11, 5, 4, 3, 2);
+
+const int lightPin = A0;    // LDR
+const int tempPin = A1;     // TMP36
+const int controlPin = A2;  // potentiometer или switch
+const int buzzerPin = 8;
+
+unsigned long previousMillis = 0;
+const long interval = 1000;
+
+String systemName = "SkyAlarm";
+
+byte sun[8] = {
+  0b00100,
+  0b10101,
+  0b01110,
+  0b11111,
+  0b01110,
+  0b10101,
+  0b00100,
+  0b00000
+};
+
+byte cloud[8] = {
+  0b00000,
+  0b00110,
+  0b01111,
+  0b11111,
+  0b11111,
+  0b01110,
+  0b00000,
+  0b00000
+};
+
+byte heart[8] = {
+  0b00000,
+  0b01010,
+  0b11111,
+  0b11111,
+  0b11111,
+  0b01110,
+  0b00100,
+  0b00000
+};
+
+void setup()
+{
+  Serial.begin(9600);
+
+  pinMode(buzzerPin, OUTPUT);
+
+  lcd.begin(16, 2);
+
+  lcd.createChar(0, sun);
+  lcd.createChar(1, cloud);
+  lcd.createChar(2, heart);
+
+  lcd.setCursor(0, 0);
+  lcd.print(systemName);
+
+  lcd.setCursor(0, 1);
+  lcd.print("Loading...");
+
+  delay(2000);
+  lcd.clear();
+}
+
+void loop()
+{
+  int controlValue = analogRead(controlPin);
+
+  if (controlValue < 500)
+  {
+    noTone(buzzerPin);
+
+    lcd.clear();
+    lcd.setCursor(0, 0);
+    lcd.print("System OFF");
+
+    lcd.setCursor(0, 1);
+    lcd.print("Turn ON A2");
+
+    delay(500);
+    return;
+  }
+
+  unsigned long currentMillis = millis();
+
+  int tempValue = analogRead(tempPin);
+  float voltage = tempValue * (5.0 / 1023.0);
+  float temperatureC = (voltage - 0.5) * 100;
+
+  int lightValue = analogRead(lightPin);
+
+  bool tempAlarm = temperatureC > 30;
+  bool darkAlarm = lightValue < 300;
+
+  Serial.print("Temp: ");
+  Serial.print(temperatureC);
+  Serial.print(" C  Light: ");
+  Serial.println(lightValue);
+
+  if (currentMillis - previousMillis >= interval)
+  {
+    previousMillis = currentMillis;
+
+    lcd.clear();
+
+    lcd.setCursor(0, 0);
+    lcd.print("T:");
+    lcd.print((int)temperatureC);
+    lcd.print((char)223);
+    lcd.print("C ");
+
+    lcd.print("L:");
+    lcd.print(lightValue);
+
+    lcd.setCursor(0, 1);
+
+    if (tempAlarm)
+    {
+      lcd.print("TEMP ALARM! ");
+      lcd.write(byte(0));
+
+      tone(buzzerPin, 1000, 300);
+    }
+    else if (darkAlarm)
+    {
+      lcd.print("DARK ALARM! ");
+      lcd.write(byte(1));
+
+      tone(buzzerPin, 800, 300);
+    }
+    else
+    {
+      lcd.print("All OK ");
+      lcd.write(byte(2));
+
+      tone(buzzerPin, 440, 150);
+    }
+  }
+}
+
+  </code></pre>
+</div>
+
+</section>
+
+<section class="card">
+
+        <h2>Video</h2>
+
+        <p>
+            Ilmajaami demonstratsioon video kujul.
+        </p>
+
+        <div class="video-wrapper">
+
+            <iframe
+                src="https://www.youtube.com/embed/k8nSsYxl-Gs?rel=0"
+                title="YouTube video player"
+                allowfullscreen>
+            </iframe>
+
+        </div>
+
+    </section>
+</main>
+<footer class="footer">
+    <p>Sergei Hüvenen ainemapp © 2025</p>
+</footer>
+</body>
+</html>
