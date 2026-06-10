@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="et">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tõkkepuu</title>
+
+    <link rel="stylesheet" href="../../style.css">
+
+
+</head>
+
+<body>
+
+<header class="hero">
+
+    <h1>Nutikas parkimistõkkepuu süsteem</h1>
+
+    <p>
+        Arduino nutikas parkimistõkkepuu süsteem ülesanne
+    </p>
+
+</header>
+
+<main class="container">
+
+    <section class="card">
+
+        <a class="github-btn" href="../Robootika.html">
+            ← Tagasi
+        </a>
+
+        <br><br>
+
+        <h2>Kood</h2>
+
+        <div class="code-window">
+
+<pre><code>
+#include Servo.h 
+
+const int trigPin = 9;
+const int echoPin = 10;
+
+const int servoPin = 6;
+
+const int redPin = 3;
+const int greenPin = 4;
+const int bluePin = 5;
+
+Servo barrier;
+
+int openAngle = 90;
+int closedAngle = 0;
+
+int distanceLimit = 15; // cm
+
+void setup()
+{
+  Serial.begin(9600);
+
+  pinMode(trigPin, OUTPUT);
+  pinMode(echoPin, INPUT);
+
+  pinMode(redPin, OUTPUT);
+  pinMode(greenPin, OUTPUT);
+  pinMode(bluePin, OUTPUT);
+
+  barrier.attach(servoPin);
+  barrier.write(closedAngle);
+
+  setColor(0, 0, 255); // sinine = ootab
+}
+
+void loop()
+{
+  int distance = getDistance();
+
+  Serial.print("Distance: ");
+  Serial.print(distance);
+  Serial.println(" cm");
+
+  if (distance > 0 && distance < distanceLimit)
+  {
+    setColor(0, 255, 0); // roheline
+    barrier.write(openAngle);
+    delay(3000);
+  }
+  else
+  {
+    setColor(0, 0, 255); // sinine
+    barrier.write(closedAngle);
+  }
+
+  delay(300);
+}
+
+int getDistance()
+{
+  digitalWrite(trigPin, LOW);
+  delayMicroseconds(2);
+
+  digitalWrite(trigPin, HIGH);
+  delayMicroseconds(10);
+  digitalWrite(trigPin, LOW);
+
+  long duration = pulseIn(echoPin, HIGH);
+  int distance = duration * 0.034 / 2;
+
+  return distance;
+}
+
+void setColor(int red, int green, int blue)
+{
+  analogWrite(redPin, red);
+  analogWrite(greenPin, green);
+  analogWrite(bluePin, blue);
+}
+</code></pre>
+
+        </div>
+
+    </section>
+
+    <section class="card">
+    <h2>Dokumentatsioon</h2>
+
+    <p>
+        <strong>Projekti nimi:</strong> Nutikas parkimistõkkepuu süsteem
+    </p>
+
+    <h3>Projekti eesmärk</h3>
+    <p>
+        Projekti eesmärk oli luua automaatne parkimistõkkepuu, mis tuvastab sõiduki
+        ultrahelianduri abil ning avab tõkkepuu automaatselt servomootori abil.
+        Süsteem kasutab RGB LED-i, et anda kasutajale visuaalset tagasisidet süsteemi oleku kohta.
+    </p>
+
+    <h3>Kasutatud komponendid</h3>
+    <ul>
+        <li>Arduino Uno R3</li>
+        <li>HC-SR04 ultraheliandur</li>
+        <li>Servomootor SG90</li>
+        <li>RGB LED</li>
+        <li>220 Ω takistid</li>
+        <li>Breadboard</li>
+        <li>Ühendusjuhtmed</li>
+        <li>USB-kaabel</li>
+    </ul>
+
+    <h3>Süsteemi tööpõhimõte</h3>
+    <ol>
+        <li>Ultraheliandur mõõdab pidevalt kaugust objektini.</li>
+        <li>Kui sõiduk on lähemal kui 15 cm, tuvastatakse selle saabumine.</li>
+        <li>Servomootor pöörab tõkkepuu 90° ja avab sissepääsu.</li>
+        <li>RGB LED süttib roheliselt, mis näitab, et läbipääs on lubatud.</li>
+        <li>Kui sõiduk eemaldub, sulgub tõkkepuu ning LED muutub siniseks.</li>
+    </ol>
+
+    <h3>Ühendused</h3>
+    <ul>
+        <li><strong>HC-SR04:</strong> VCC → 5V, GND → GND, TRIG → D9, ECHO → D10</li>
+        <li><strong>Servo:</strong> Signaal → D6, VCC → 5V, GND → GND</li>
+        <li><strong>RGB LED:</strong> R → D3, G → D4, B → D5, ühine jalg → GND</li>
+    </ul>
+
+    <h3>Algoritm</h3>
+    <ol>
+        <li>Süsteem käivitub.</li>
+        <li>Arduino loeb ultrahelianduri mõõtmisi.</li>
+        <li>Kui kaugus on väiksem kui 15 cm, avaneb tõkkepuu.</li>
+        <li>Kui kaugus on suurem kui 15 cm, sulgub tõkkepuu.</li>
+    </ol>
+
+    <h3>Projekti eelised</h3>
+    <ul>
+        <li>Automaatne töö.</li>
+        <li>Lihtne ehitus ja programmeerimine.</li>
+        <li>Madal energiatarve.</li>
+        <li>Võimalik edasi arendada suuremaks süsteemiks.</li>
+    </ul>
+
+    <h3>Võimalikud edasiarendused</h3>
+    <ul>
+        <li>LCD-ekraan vabade parkimiskohtade kuvamiseks.</li>
+        <li>Teine ultraheliandur sõidukite loendamiseks.</li>
+        <li>Buzzer helisignaaliks.</li>
+        <li>RFID-kaardi või numbrituvastuse lisamine.</li>
+        <li>Wi-Fi moodul kaugjälgimiseks.</li>
+    </ul>
+
+    <h3>Kokkuvõte</h3>
+    <p>
+        Nutikas parkimistõkkepuu süsteem täidab edukalt oma eesmärgi.
+        Süsteem tuvastab sõiduki, avab automaatselt tõkkepuu ning annab
+        kasutajale visuaalset tagasisidet RGB LED-i abil. Projekti käigus
+        õpiti kasutama Arduino mikrokontrollerit, ultraheliandurit,
+        servomootorit ning looma automaatikasüsteemi.
+    </p>
+
+</section>
+
+    <section class="card">
+
+        <h2>Video</h2>
+
+        <p>
+            Nutikas parkimistõkkepuu süsteemi demonstratsioon video kujul.
+        </p>
+
+        <div class="video-wrapper">
+
+            <iframe
+                src="https://www.youtube.com/embed/oQc9KywPWSM?rel=0"
+                title="YouTube video player"
+                allowfullscreen>
+            </iframe>
+
+        </div>
+
+    </section>
+
+</main>
+
+<footer class="footer">
+    <p>Sergei Hüvenen ainemapp © 2025</p>
+</footer>
+
+</body>
+</html>
