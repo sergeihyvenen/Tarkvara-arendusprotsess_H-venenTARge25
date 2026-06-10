@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="et">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nutikas takistuste vältimise robot</title>
+
+    <link rel="stylesheet" href="../../style.css">
+
+
+</head>
+
+<body>
+
+<header class="hero">
+
+    <h1>Nutikas takistuste vältimise robot</h1>
+
+    <p>
+        Arduino Nutikas takistuste vältimise robot ülesanne
+    </p>
+
+</header>
+
+<main class="container">
+
+    <section class="card">
+
+        <a class="github-btn" href="../Robootika.html">
+            ← Tagasi
+        </a>
+
+        <br><br>
+
+        <h2>Kood</h2>
+
+        <div class="code-window">
+
+<pre><code>
+// DISTANCE VARIABLES
+const int trigPin = 3;
+const int echoPin = 2;
+
+long duration;
+int dist_result;
+
+// MOTORS VARIABLES
+const int mot1f = 6;
+const int mot1b = 5;
+const int mot2f = 11;
+const int mot2b = 10;
+
+int mot_speed = 225;
+int k = 0;
+
+// LOGIC VARIABLES
+const int dist_stop = 25;
+const int max_range = 800;
+const int min_range = 0;
+
+const int errorLED = 13;
+
+void setup() {
+  pinMode(trigPin, OUTPUT);
+  pinMode(echoPin, INPUT);
+  pinMode(errorLED, OUTPUT);
+
+  pinMode(mot1f, OUTPUT);
+  pinMode(mot1b, OUTPUT);
+  pinMode(mot2f, OUTPUT);
+  pinMode(mot2b, OUTPUT);
+
+  motors_stop();
+}
+
+void loop() {
+  delay(100);
+
+  int result = ping();
+
+  if (result <= min_range || result >= max_range) {
+    digitalWrite(errorLED, HIGH);
+    motors_stop();
+    delay(500);
+    return;
+  }
+
+  if (result <= dist_stop) {
+    digitalWrite(errorLED, LOW);
+
+    motors_back();
+    delay(1000);
+
+    motors_stop();
+    delay(200);
+
+    motors_left();
+    delay(300);
+
+    motors_stop();
+    delay(200);
+  } else {
+    motors_forward();
+    delay(100);
+  }
+}
+
+// CHECK DISTANCE FUNCTION
+int ping() {
+  int d1 = singlePing();
+  delay(10);
+  int d2 = singlePing();
+  delay(10);
+  int d3 = singlePing();
+
+  dist_result = (d1 + d2 + d3) / 3;
+  return dist_result;
+}
+
+int singlePing() {
+  digitalWrite(trigPin, LOW);
+  delayMicroseconds(2);
+
+  digitalWrite(trigPin, HIGH);
+  delayMicroseconds(10);
+
+  digitalWrite(trigPin, LOW);
+
+  duration = pulseIn(echoPin, HIGH, 30000);
+
+  if (duration == 0) {
+    return max_range;
+  }
+
+  return duration / 58;
+}
+
+void motors_forward() {
+  analogWrite(mot1f, mot_speed);
+  analogWrite(mot2f, mot_speed);
+  digitalWrite(mot1b, LOW);
+  digitalWrite(mot2b, LOW);
+}
+
+void motors_back() {
+  digitalWrite(mot1f, LOW);
+  digitalWrite(mot2f, LOW);
+  analogWrite(mot1b, mot_speed);
+  analogWrite(mot2b, mot_speed);
+}
+
+void motors_stop() {
+  digitalWrite(mot1f, LOW);
+  digitalWrite(mot2f, LOW);
+  digitalWrite(mot1b, LOW);
+  digitalWrite(mot2b, LOW);
+}
+
+void motors_left() {
+  analogWrite(mot1f, mot_speed);
+  digitalWrite(mot2f, LOW);
+  digitalWrite(mot1b, LOW);
+  analogWrite(mot2b, mot_speed);
+}
+
+void motors_right() {
+  digitalWrite(mot1f, LOW);
+  analogWrite(mot2f, mot_speed);
+  analogWrite(mot1b, mot_speed);
+  digitalWrite(mot2b, LOW);
+}
+
+void motors_forward_left() {
+  k = mot_speed * 0.8;
+  analogWrite(mot1f, mot_speed);
+  analogWrite(mot2f, k);
+  digitalWrite(mot1b, LOW);
+  digitalWrite(mot2b, LOW);
+}
+
+void motors_forward_right() {
+  k = mot_speed * 0.8;
+  analogWrite(mot1f, k);
+  analogWrite(mot2f, mot_speed);
+  digitalWrite(mot1b, LOW);
+  digitalWrite(mot2b, LOW);
+}
+
+void motors_back_left() {
+  k = mot_speed * 0.8;
+  digitalWrite(mot1f, LOW);
+  digitalWrite(mot2f, LOW);
+  analogWrite(mot1b, k);
+  analogWrite(mot2b, mot_speed);
+}
+
+void motors_back_right() {
+  k = mot_speed * 0.8;
+  digitalWrite(mot1f, LOW);
+  digitalWrite(mot2f, LOW);
+  analogWrite(mot1b, mot_speed);
+  analogWrite(mot2b, k);
+}
+</code></pre>
+
+        </div>
+
+    </section>
+
+    <section class="card">
+    <h2>Dokumentatsioon</h2>
+
+    <p>
+        <strong>Projekti nimi:</strong> Nutikas takistuste vältimise robot
+    </p>
+
+    <h3>Projekti eesmärk</h3>
+    <p>
+        Projekti eesmärk oli luua autonoomne robot, mis liigub iseseisvalt ning
+        väldib takistusi ultrahelianduri abil. Robot kasutab Arduino Uno
+        mikrokontrollerit, HC-SR04 ultraheliandurit ja L298N mootoridraiverit,
+        et juhtida kahte alalisvoolumootorit. Süsteem võimaldab robotil
+        automaatselt tuvastada takistusi ning muuta liikumissuunda ilma inimese
+        sekkumiseta.
+    </p>
+
+    <h3>Kasutatud komponendid</h3>
+    <ul>
+        <li>Arduino Uno R3</li>
+        <li>HC-SR04 ultraheliandur</li>
+        <li>L298N mootoridraiver</li>
+        <li>2 × DC mootorit</li>
+        <li>LED indikaator (D13)</li>
+        <li>9V patareitoide</li>
+        <li>Ühendusjuhtmed</li>
+        <li>Roboti alusraam</li>
+    </ul>
+
+    <h3>Süsteemi tööpõhimõte</h3>
+    <ol>
+        <li>Ultraheliandur mõõdab pidevalt kaugust roboti ees oleva objektini.</li>
+        <li>Arduino teeb kolm järjestikust mõõtmist ning arvutab nende keskmise väärtuse.</li>
+        <li>Kui kaugus on suurem kui 25 cm, liigub robot otse edasi.</li>
+        <li>Kui kaugus on väiksem kui 25 cm, peatub robot, liigub ühe sekundi tagasi ning pöörab vasakule.</li>
+        <li>Pärast pööramist jätkab robot automaatselt liikumist edasi.</li>
+        <li>Kui andur ei saa korrektset mõõtmist, peatatakse mootorid ning süttib veatuli.</li>
+    </ol>
+
+    <h3>Ühendused</h3>
+    <ul>
+        <li><strong>HC-SR04:</strong> TRIG → D3, ECHO → D2, VCC → 5V, GND → GND</li>
+        <li><strong>L298N:</strong> IN1 → D6, IN2 → D5, IN3 → D11, IN4 → D10</li>
+        <li><strong>LED:</strong> D13</li>
+        <li><strong>DC mootorid:</strong> ühendatud L298N väljunditesse OUT1–OUT4</li>
+        <li><strong>Toide:</strong> Arduino Uno ja 9V patarei</li>
+    </ul>
+
+    <h3>Programmi töö</h3>
+    <ol>
+        <li>Robot käivitub ning kõik mootorid peatatakse.</li>
+        <li>Ultraheliandur mõõdab pidevalt ees oleva objekti kaugust.</li>
+        <li>Funktsioon <strong>ping()</strong> teeb kolm mõõtmist ja arvutab nende keskmise väärtuse.</li>
+        <li>Kui kaugus on suurem kui 25 cm, liigub robot edasi.</li>
+        <li>Kui kaugus on väiksem või võrdne 25 cm, liigub robot tagasi, peatub ning pöörab vasakule.</li>
+        <li>Pärast pööramist jätkab robot uuesti liikumist edasi.</li>
+        <li>Kui mõõtmine ebaõnnestub või kaugus on väljaspool lubatud vahemikku, peatatakse robot ning LED süttib.</li>
+    </ol>
+
+    <h3>Kasutatud funktsioonid</h3>
+    <ul>
+        <li><strong>ping()</strong> – teeb kolm mõõtmist ja tagastab keskmise kauguse.</li>
+        <li><strong>singlePing()</strong> – teeb ühe ultraheli mõõtmise.</li>
+        <li><strong>motors_forward()</strong> – robot liigub edasi.</li>
+        <li><strong>motors_back()</strong> – robot liigub tagasi.</li>
+        <li><strong>motors_stop()</strong> – peatab mõlemad mootorid.</li>
+        <li><strong>motors_left()</strong> – robot pöörab vasakule.</li>
+        <li><strong>motors_right()</strong> – robot pöörab paremale.</li>
+        <li><strong>motors_forward_left()</strong> ja <strong>motors_forward_right()</strong> – sujuvad pöörded edasi liikudes.</li>
+        <li><strong>motors_back_left()</strong> ja <strong>motors_back_right()</strong> – pöörded tagurdamisel.</li>
+    </ul>
+
+    <h3>Projekti eelised</h3>
+    <ul>
+        <li>Autonoomne liikumine ilma kasutaja sekkumiseta.</li>
+        <li>Automaatne takistuste tuvastamine ultrahelianduriga.</li>
+        <li>Täpsem mõõtmine kolme järjestikuse mõõtmise keskmise abil.</li>
+        <li>Lihtne ehitus ja programmeerimine.</li>
+        <li>Sobib Arduino ja robootika õppimiseks.</li>
+    </ul>
+
+    <h3>Võimalikud edasiarendused</h3>
+    <ul>
+        <li>Servo lisamine ultraheliandurile 180° ümbruse skaneerimiseks.</li>
+        <li>Takistuste vältimine nii vasakul kui paremal pool.</li>
+        <li>Joonejärgimise andurite lisamine.</li>
+        <li>LCD-ekraan roboti oleku ja kauguse kuvamiseks.</li>
+        <li>Buzzer helisignaali jaoks.</li>
+        <li>Laetava aku kasutamine pikemaks tööajaks.</li>
+    </ul>
+
+    <h3>Kokkuvõte</h3>
+    <p>
+        Projekt "Nutikas takistuste vältimise robot" täidab edukalt oma eesmärgi.
+        Robot liigub iseseisvalt, mõõdab ultrahelianduri abil kaugust ning
+        väldib automaatselt takistusi. Takistuse avastamisel liigub robot
+        tagasi, pöörab vasakule ja jätkab liikumist. Vigaste mõõtmiste korral
+        peatatakse mootorid ning LED annab veast märku. Projekti käigus omandati
+        praktilisi teadmisi Arduino programmeerimisest, ultrahelianduri
+        kasutamisest ja mootorite juhtimisest L298N draiveri abil.
+    </p>
+
+</section>
+
+    <section class="card">
+
+        <h2>Video</h2>
+
+        <p>
+            Nutikas parkimistõkkepuu süsteemi demonstratsioon video kujul.
+        </p>
+
+        <div class="video-wrapper">
+
+            <iframe
+                src="https://www.youtube.com/embed/0E2HJTpjffQ?rel=0"
+                title="YouTube video player"
+                allowfullscreen>
+            </iframe>
+
+        </div>
+
+    </section>
+
+</main>
+
+<footer class="footer">
+    <p>Sergei Hüvenen ainemapp © 2025</p>
+</footer>
+
+</body>
+</html>
